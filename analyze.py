@@ -28,6 +28,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--baseline", help="a normal log; patterns missing from it are flagged as new")
     ap.add_argument("--top", type=int, default=10)
     ap.add_argument("--year", type=int, help="year for syslog timestamps, which have none (default: this year)")
+    ap.add_argument("--explain", action="store_true", help="also find the root cause with the KB and the LLM")
     args = ap.parse_args(argv)
 
     if not os.path.isfile(args.logfile):
@@ -57,7 +58,31 @@ def main(argv: list[str] | None = None) -> int:
 
     if not result.suspicious:
         print("Nothing looks suspicious.")
+    if args.explain:
+        print_root_cause(args.logfile)
     return 0
+
+
+def print_root_cause(path: str) -> None:
+    from rcf.pipeline import default_kb, default_llm, find_root_cause
+
+    with open(path, encoding="utf-8", errors="replace") as fh:
+        report = find_root_cause(fh.readlines(), default_kb(), default_llm())
+    rc = report["root_cause"]
+    print("=" * 70)
+    print(f"ROOT CAUSE: {rc['root_cause']}")
+    print(f"category: {rc['category']}  alternatives: {rc['alternatives']}  confidence: {rc['confidence']}")
+    if rc.get("error"):
+        print(f"note: {rc['error']}")
+    print("evidence:")
+    for ev in rc["evidence_lines"]:
+        print(f"  L{ev['line']}: {ev['text'].strip()[:150]}")
+    for d in rc.get("dropped_evidence", []):
+        print(f"  dropped: {d['reason']}")
+    print("next steps:")
+    for step in rc["next_steps"]:
+        print(f"  - {step}")
+    print(f"({report['stats']['seconds']}s total, {report['stats'].get('llm_seconds', 0)}s in the LLM)")
 
 
 if __name__ == "__main__":
