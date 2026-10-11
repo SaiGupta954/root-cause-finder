@@ -1,6 +1,6 @@
 # Root Cause Finder
 
-<!-- CI badge goes here once the repo is on GitHub -->
+[![tests](https://github.com/SaiGupta954/root-cause-finder/actions/workflows/tests.yml/badge.svg)](https://github.com/SaiGupta954/root-cause-finder/actions/workflows/tests.yml)
 
 Upload a Linux log file and get back the most likely root cause, **with the exact log lines as proof**.
 An LLM suggests the cause, and plain code checks that every log line it points to really exists.
