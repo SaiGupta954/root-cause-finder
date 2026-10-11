@@ -1,6 +1,6 @@
 # Root Cause Finder
 
-![tests](BADGE_URL)
+<!-- CI badge goes here once the repo is on GitHub -->
 
 Upload a Linux log file and get back the most likely root cause, **with the exact log lines as proof**.
 An LLM suggests the cause, and plain code checks that every log line it points to really exists.
