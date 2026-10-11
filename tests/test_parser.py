@@ -96,3 +96,19 @@ def test_embedded_levels():
     assert infer_level("2026-10-11 16:00:00.1 UTC [1] FATAL:  data directory has wrong ownership") == "CRITICAL"
     assert infer_level("2026/10/11 16:00:00 [warn] 1#1: conflicting server name") == "WARNING"
     assert infer_level("2026-10-11 16:00:00.1 UTC [1] LOG:  database system is ready") == "INFO"
+
+
+def test_inner_app_timestamps_do_not_split_or_clutter_patterns():
+    lines = [
+        "2026-10-11T17:16:02.1Z 2026/10/11 17:16:02 [emerg] 1#1: still could not bind()",
+        "2026-10-11T17:16:03.1Z 2026/10/11 17:16:03 [emerg] 1#1: still could not bind()",
+        "2026-10-11T17:04:27.1Z 2026-10-11 17:04:27,130 ERROR exporter: batch 14 failed: [Errno 28] No space left on device",
+        "2026-10-11T17:04:15.1Z 1:M 11 Oct 2026 17:04:15.353 * Ready to accept connections tcp",
+    ]
+    p = LogParser(year=2026)
+    a, b, c, d = p.parse_lines(lines)
+    assert a.pattern_id == b.pattern_id
+    assert p.template(a.pattern_id) == "[emerg] <NUM>#<NUM>: still could not bind()"
+    assert p.template(c.pattern_id).startswith("ERROR exporter: batch <NUM> failed")
+    assert p.template(d.pattern_id) == "* Ready to accept connections tcp"
+    assert a.raw.startswith("2026-10-11T17:16:02.1Z 2026/10/11")  # the original line is untouched

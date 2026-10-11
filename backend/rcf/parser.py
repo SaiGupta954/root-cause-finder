@@ -34,6 +34,13 @@ ISO_RE = re.compile(
 )
 # "2026-10-11T16:00:00.123456789Z 2026/10/11 16:00:00 [emerg] 1#1: ..."   (docker logs -t, kubectl --timestamps)
 TS_ONLY_RE = re.compile(ISO_TS + r"(?P<message>.*)$")
+# An application's own timestamp at the start of the message (after docker's): nginx "2026/10/11 17:16:02",
+# python logging "2026-10-11 17:04:27,130", postgres "2026-10-11 17:10:58.833 GMT [37]", redis "1:M 11 Oct 2026 17:04:15.353"
+INNER_TS_RE = re.compile(
+    r"^(?:\d+:[A-Z] )?"
+    r"(?:\d{4}[-/]\d{2}[-/]\d{2}[ T]\d{2}:\d{2}:\d{2}(?:[.,]\d+)?(?: ?(?:UTC|GMT|Z|[+-]\d{2}:?\d{2}))?"
+    r"|\d{1,2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2}(?:\.\d+)?)\s+"
+)
 # An explicit level word near the start of the message, e.g. "ERROR: ..." or "[warn] ..."
 EXPLICIT_LEVEL_RE = re.compile(
     r"^\W{0,2}(?P<level>emerg|alert|crit(?:ical)?|err(?:or)?|warn(?:ing)?|notice|info|debug)\b",
@@ -155,7 +162,8 @@ class LogParser:
         # The level goes first so Drain can never merge "Failed password ..." with "Accepted password ...";
         # without it, both become "<*> password ..." and the error word is lost. The component keeps
         # "sshd: X" and "cron: X" apart. PIDs are already dropped. template() strips the level again.
-        body = f"{rec.component}: {rec.message}" if rec.component else rec.message
+        message = INNER_TS_RE.sub("", rec.message, count=1)
+        body = f"{rec.component}: {message}" if rec.component else message
         return f"{rec.level} {body}"
 
     def parse_lines(self, lines: Iterable[str]) -> list[LogRecord]:
