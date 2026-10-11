@@ -13,6 +13,7 @@ from .kb import Card
 
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 MODEL = os.environ.get("RCF_MODEL", "llama3.1:8b")
+LLM_TIMEOUT = float(os.environ.get("RCF_LLM_TIMEOUT", "600"))  # CPU-only Docker can take minutes
 
 MAX_GROUPS = 8
 SAMPLES_PER_GROUP = 3
@@ -24,7 +25,7 @@ class LLMClient(Protocol):
 
 
 class OllamaClient:
-    def __init__(self, host: str = OLLAMA_HOST, model: str = MODEL, timeout: float = 180.0):
+    def __init__(self, host: str = OLLAMA_HOST, model: str = MODEL, timeout: float = LLM_TIMEOUT):
         self.host, self.model, self.timeout = host.rstrip("/"), model, timeout
 
     def complete(self, system: str, user: str, schema: dict) -> str:

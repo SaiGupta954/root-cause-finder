@@ -1,0 +1,5 @@
+{
+  "disk_full_postgres.log": "Postgres: disk full",
+  "dns_failure_python_http.log": "Worker: wrong DNS server",
+  "port_in_use_nginx.log": "nginx: port already in use"
+}

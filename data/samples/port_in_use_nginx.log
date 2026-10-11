@@ -1,0 +1,27 @@
+2026-10-11T17:16:02.673098879Z 2026/10/11 17:16:02 [notice] 7#7: using the "epoll" event method
+2026-10-11T17:16:02.673116403Z 2026/10/11 17:16:02 [notice] 7#7: nginx/1.27.5
+2026-10-11T17:16:02.673118823Z 2026/10/11 17:16:02 [notice] 7#7: built by gcc 14.2.0 (Alpine 14.2.0) 
+2026-10-11T17:16:02.673120283Z 2026/10/11 17:16:02 [notice] 7#7: OS: Linux 6.8.0-117-generic
+2026-10-11T17:16:02.673121493Z 2026/10/11 17:16:02 [notice] 7#7: getrlimit(RLIMIT_NOFILE): 1024:524288
+2026-10-11T17:16:02.673924977Z 2026/10/11 17:16:02 [notice] 8#8: start worker processes
+2026-10-11T17:16:02.674258395Z 2026/10/11 17:16:02 [notice] 8#8: start worker process 9
+2026-10-11T17:16:02.674265655Z 2026/10/11 17:16:02 [notice] 8#8: start worker process 11
+2026-10-11T17:16:02.674372845Z 2026/10/11 17:16:02 [notice] 8#8: start worker process 12
+2026-10-11T17:16:02.674378895Z 2026/10/11 17:16:02 [notice] 8#8: start worker process 13
+2026-10-11T17:16:03.685070761Z 2026/10/11 17:16:03 [emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:03.685131839Z nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:03.685136094Z 2026/10/11 17:16:03 [notice] 1#1: try again to bind() after 500ms
+2026-10-11T17:16:04.195703696Z 2026/10/11 17:16:03 [emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:04.195825005Z nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:04.195830971Z 2026/10/11 17:16:03 [notice] 1#1: try again to bind() after 500ms
+2026-10-11T17:16:04.702690571Z 2026/10/11 17:16:03 [emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:04.702794776Z nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:04.702808292Z 2026/10/11 17:16:03 [notice] 1#1: try again to bind() after 500ms
+2026-10-11T17:16:05.213273982Z 2026/10/11 17:16:03 [emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:05.213344100Z nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:05.213347812Z 2026/10/11 17:16:03 [notice] 1#1: try again to bind() after 500ms
+2026-10-11T17:16:05.719162689Z 2026/10/11 17:16:03 [emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:05.719248283Z nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address in use)
+2026-10-11T17:16:05.719256208Z 2026/10/11 17:16:03 [notice] 1#1: try again to bind() after 500ms
+2026-10-11T17:16:06.229661040Z 2026/10/11 17:16:03 [emerg] 1#1: still could not bind()
+2026-10-11T17:16:06.229725063Z nginx: [emerg] still could not bind()

@@ -1,0 +1,54 @@
+# docker compose up --build   ->   open http://localhost:8080
+#
+# The first start downloads the LLM (llama3.1:8b, about 4.9 GB) into the ollama volume.
+# On a Mac, Docker cannot use the GPU, so the LLM in this stack runs on CPU and is much slower.
+# To use Ollama running on the Mac instead:  OLLAMA_HOST=http://host.docker.internal:11434 docker compose up
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  ollama-pull:
+    image: ollama/ollama:latest
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "${RCF_MODEL:-llama3.1:8b}"]
+    restart: "no"
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    environment:
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://ollama:11434}
+      RCF_MODEL: ${RCF_MODEL:-llama3.1:8b}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # lets OLLAMA_HOST point at Ollama on the host machine
+    volumes:
+      - state:/app/state
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  ollama:
+  state:
