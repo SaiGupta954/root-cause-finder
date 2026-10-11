@@ -1,0 +1,28 @@
+2026-10-11T17:15:20.227320101Z 2026-10-11 17:15:20,227 INFO Set uid to user 0 succeeded
+2026-10-11T17:15:20.228488451Z 2026-10-11 17:15:20,228 INFO supervisord started with pid 1
+2026-10-11T17:15:21.238115030Z 2026-10-11 17:15:21,237 INFO spawned: 'app' with pid 7
+2026-10-11T17:15:21.249110689Z Traceback (most recent call last):
+2026-10-11T17:15:21.249119960Z   File "<string>", line 1, in <module>
+2026-10-11T17:15:21.249122256Z ModuleNotFoundError: No module named 'requests_oauthlib'
+2026-10-11T17:15:21.251431956Z 2026-10-11 17:15:21,251 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:22.259319754Z 2026-10-11 17:15:22,259 INFO spawned: 'app' with pid 8
+2026-10-11T17:15:22.270217597Z Traceback (most recent call last):
+2026-10-11T17:15:22.270229997Z   File "<string>", line 1, in <module>
+2026-10-11T17:15:22.270232084Z ModuleNotFoundError: No module named 'requests_oauthlib'
+2026-10-11T17:15:22.272961586Z 2026-10-11 17:15:22,272 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:24.284029789Z 2026-10-11 17:15:24,283 INFO spawned: 'app' with pid 9
+2026-10-11T17:15:24.295036897Z Traceback (most recent call last):
+2026-10-11T17:15:24.295059767Z   File "<string>", line 1, in <module>
+2026-10-11T17:15:24.295062313Z ModuleNotFoundError: No module named 'requests_oauthlib'
+2026-10-11T17:15:24.297544044Z 2026-10-11 17:15:24,297 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:28.222740556Z 2026-10-11 17:15:28,222 INFO spawned: 'app' with pid 10
+2026-10-11T17:15:28.232996444Z Traceback (most recent call last):
+2026-10-11T17:15:28.233013908Z   File "<string>", line 1, in <module>
+2026-10-11T17:15:28.233016475Z ModuleNotFoundError: No module named 'requests_oauthlib'
+2026-10-11T17:15:28.235625086Z 2026-10-11 17:15:28,235 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:32.261470605Z 2026-10-11 17:15:32,261 INFO spawned: 'app' with pid 11
+2026-10-11T17:15:32.272283268Z Traceback (most recent call last):
+2026-10-11T17:15:32.272308335Z   File "<string>", line 1, in <module>
+2026-10-11T17:15:32.272310976Z ModuleNotFoundError: No module named 'requests_oauthlib'
+2026-10-11T17:15:32.274753366Z 2026-10-11 17:15:32,274 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:33.276945543Z 2026-10-11 17:15:33,276 INFO gave up: app entered FATAL state, too many start retries too quickly

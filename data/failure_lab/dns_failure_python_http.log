@@ -1,0 +1,8 @@
+2026-10-11T17:14:12.970516491Z 2026-10-11 17:14:12,970 INFO sync: sync worker started, upstream=http://example.com/
+2026-10-11T17:14:12.986644012Z 2026-10-11 17:14:12,986 ERROR sync: sync attempt 1 failed: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-10-11T17:14:14.994268247Z 2026-10-11 17:14:14,993 ERROR sync: sync attempt 2 failed: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-10-11T17:14:21.010640463Z 2026-10-11 17:14:21,010 ERROR sync: sync attempt 3 failed: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-10-11T17:14:23.017605761Z 2026-10-11 17:14:23,017 ERROR sync: sync attempt 4 failed: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-10-11T17:14:25.028259917Z 2026-10-11 17:14:25,027 ERROR sync: sync attempt 5 failed: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-10-11T17:14:30.935477335Z 2026-10-11 17:14:30,935 ERROR sync: sync attempt 6 failed: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-10-11T17:14:32.941687822Z 2026-10-11 17:14:32,941 INFO sync: sync worker stopping

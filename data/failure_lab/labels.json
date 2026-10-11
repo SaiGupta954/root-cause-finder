@@ -1,0 +1,152 @@
+[
+  {
+    "case": "disk_full_postgres",
+    "category": "disk_full",
+    "root_cause": "The PostgreSQL data directory filesystem (80 MB) filled up during a large INSERT, so Postgres could not extend its data files."
+  },
+  {
+    "case": "disk_full_redis",
+    "category": "disk_full",
+    "root_cause": "The Redis data directory (6 MB) filled up, so Redis could not write its append-only file (AOF)."
+  },
+  {
+    "case": "disk_full_nginx",
+    "category": "disk_full",
+    "root_cause": "The filesystem holding the nginx access log (300 KB) filled up, so nginx could not write log lines."
+  },
+  {
+    "case": "disk_full_exporter",
+    "category": "disk_full",
+    "root_cause": "The export job's /data filesystem (3 MB) filled up and every batch write failed with ENOSPC."
+  },
+  {
+    "case": "dns_failure_wget",
+    "category": "dns_failure",
+    "root_cause": "The container's DNS server points at a host that runs no DNS server, so example.com cannot be resolved and uploads fail."
+  },
+  {
+    "case": "dns_failure_python_http",
+    "category": "dns_failure",
+    "root_cause": "The container's DNS server points at a host that runs no DNS server, so the sync worker cannot resolve example.com."
+  },
+  {
+    "case": "dns_failure_db_connect",
+    "category": "dns_failure",
+    "root_cause": "resolv.conf points at 127.0.0.1 where no DNS server runs, so the database host name cannot be resolved."
+  },
+  {
+    "case": "dns_failure_nginx_resolver",
+    "category": "dns_failure",
+    "root_cause": "The nginx resolver directive points at a host that runs no DNS server, so the upstream host example.com cannot be resolved."
+  },
+  {
+    "case": "crash_loop_missing_env",
+    "category": "crash_loop",
+    "root_cause": "The worker exits at start because the DATABASE_URL environment variable is missing; supervisord restarts it until it gives up."
+  },
+  {
+    "case": "crash_loop_missing_module",
+    "category": "crash_loop",
+    "root_cause": "The app exits at start because the Python module requests_oauthlib is not installed; supervisord restarts it until it gives up."
+  },
+  {
+    "case": "crash_loop_segfault",
+    "category": "crash_loop",
+    "root_cause": "The render worker segfaults (SIGSEGV) right after starting; supervisord restarts it until it gives up."
+  },
+  {
+    "case": "crash_loop_docker_restart",
+    "category": "crash_loop",
+    "root_cause": "The API exits at start because /etc/api/config.json does not exist; Docker's restart policy restarts it 5 times."
+  },
+  {
+    "case": "permission_denied_nginx_root",
+    "category": "permission_denied",
+    "root_cause": "The nginx web root /usr/share/nginx/html is mode 700 (root only), so nginx workers get Permission denied on every file."
+  },
+  {
+    "case": "permission_denied_app_logfile",
+    "category": "permission_denied",
+    "root_cause": "The billing service runs as uid 1000 but /var/log/app is not writable by it, so opening its log file fails with Permission denied."
+  },
+  {
+    "case": "permission_denied_postgres_datadir",
+    "category": "permission_denied",
+    "root_cause": "Postgres runs as uid 70 but its PGDATA parent directory is owned by root, so initdb cannot create the data directory."
+  },
+  {
+    "case": "permission_denied_static_upload",
+    "category": "permission_denied",
+    "root_cause": "The export job runs as user web but /srv/uploads is read-only (mode 555), so writing the report fails with Permission denied."
+  },
+  {
+    "case": "port_in_use_nginx",
+    "category": "port_in_use",
+    "root_cause": "A stray nginx instance started earlier already listens on port 80, so the new nginx cannot bind 0.0.0.0:80 and exits."
+  },
+  {
+    "case": "port_in_use_redis",
+    "category": "port_in_use",
+    "root_cause": "A first redis-server already listens on port 6379, so the second redis-server cannot bind and aborts."
+  },
+  {
+    "case": "port_in_use_postgres_shared_net",
+    "category": "port_in_use",
+    "root_cause": "Another PostgreSQL in the same network namespace already listens on port 5432, so this one cannot bind and exits."
+  },
+  {
+    "case": "port_in_use_python_api",
+    "category": "port_in_use",
+    "root_cause": "The metrics server already listens on port 8000, so orders-api cannot bind port 8000."
+  },
+  {
+    "case": "out_of_memory_cgroup_kill",
+    "category": "out_of_memory",
+    "root_cause": "The report builder keeps growing in memory until the container's 96 MB limit is reached and the kernel OOM-kills it."
+  },
+  {
+    "case": "out_of_memory_python_memoryerror",
+    "category": "out_of_memory",
+    "root_cause": "The report builder exceeds the 250 MB virtual memory limit (ulimit -v) and Python raises MemoryError."
+  },
+  {
+    "case": "out_of_memory_redis_maxmemory",
+    "category": "out_of_memory",
+    "root_cause": "Redis reached its maxmemory (3 MB) with the noeviction policy, so writes fail with OOM command not allowed."
+  },
+  {
+    "case": "out_of_memory_node_heap",
+    "category": "out_of_memory",
+    "root_cause": "The Node.js cache warmer exceeds its 48 MB heap limit (--max-old-space-size) and crashes with JavaScript heap out of memory."
+  },
+  {
+    "case": "bad_config_nginx_typo",
+    "category": "bad_config",
+    "root_cause": "The nginx config has a typo, 'listn' instead of 'listen', so nginx refuses to start."
+  },
+  {
+    "case": "bad_config_redis",
+    "category": "bad_config",
+    "root_cause": "redis.conf has an invalid maxmemory value ('512mbx'), so Redis refuses to start."
+  },
+  {
+    "case": "bad_config_postgres",
+    "category": "bad_config",
+    "root_cause": "PostgreSQL is started with an invalid value for shared_buffers ('lots'), so it refuses to start."
+  },
+  {
+    "case": "ssh_bruteforce_root",
+    "category": "ssh_bruteforce",
+    "root_cause": "One host is guessing the root password over SSH, with many failed logins in a short time."
+  },
+  {
+    "case": "ssh_bruteforce_user_enum",
+    "category": "ssh_bruteforce",
+    "root_cause": "One host is trying many invalid user names over SSH (user enumeration / password guessing)."
+  },
+  {
+    "case": "ssh_bruteforce_many_ips",
+    "category": "ssh_bruteforce",
+    "root_cause": "Three hosts are guessing root and common user passwords over SSH at the same time."
+  }
+]

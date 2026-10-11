@@ -1,0 +1,18 @@
+2026-10-11T17:15:34.146408003Z 2026-10-11 17:15:34,146 INFO Set uid to user 0 succeeded
+2026-10-11T17:15:34.147669965Z 2026-10-11 17:15:34,147 INFO supervisord started with pid 1
+2026-10-11T17:15:35.157207625Z 2026-10-11 17:15:35,156 INFO spawned: 'app' with pid 7
+2026-10-11T17:15:35.169519778Z render worker ready
+2026-10-11T17:15:36.183942700Z 2026-10-11 17:15:36,183 WARN exited: app (terminated by SIGSEGV (core dumped); not expected)
+2026-10-11T17:15:37.190009840Z 2026-10-11 17:15:37,189 INFO spawned: 'app' with pid 8
+2026-10-11T17:15:37.201964073Z render worker ready
+2026-10-11T17:15:38.205551469Z 2026-10-11 17:15:38,205 WARN exited: app (terminated by SIGSEGV (core dumped); not expected)
+2026-10-11T17:15:40.220276081Z 2026-10-11 17:15:40,220 INFO spawned: 'app' with pid 9
+2026-10-11T17:15:40.232565038Z render worker ready
+2026-10-11T17:15:41.243637597Z 2026-10-11 17:15:41,243 WARN exited: app (terminated by SIGSEGV (core dumped); not expected)
+2026-10-11T17:15:44.272114009Z 2026-10-11 17:15:44,270 INFO spawned: 'app' with pid 10
+2026-10-11T17:15:44.283156257Z render worker ready
+2026-10-11T17:15:45.293934031Z 2026-10-11 17:15:45,293 WARN exited: app (terminated by SIGSEGV (core dumped); not expected)
+2026-10-11T17:15:50.250984195Z 2026-10-11 17:15:50,249 INFO spawned: 'app' with pid 11
+2026-10-11T17:15:50.270498152Z render worker ready
+2026-10-11T17:15:51.287230280Z 2026-10-11 17:15:51,286 WARN exited: app (terminated by SIGSEGV (core dumped); not expected)
+2026-10-11T17:15:52.299504507Z 2026-10-11 17:15:52,298 INFO gave up: app entered FATAL state, too many start retries too quickly

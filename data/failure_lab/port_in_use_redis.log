@@ -1,0 +1,10 @@
+2026-10-11T17:16:07.246039007Z 7:C 11 Oct 2026 17:16:07.245 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2026-10-11T17:16:08.259895374Z 1:C 11 Oct 2026 17:16:08.259 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2026-10-11T17:16:08.261818637Z 1:C 11 Oct 2026 17:16:08.261 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2026-10-11T17:16:08.261856587Z 1:C 11 Oct 2026 17:16:08.261 * Redis version=7.4.11, bits=64, commit=00000000, modified=0, pid=1, just started
+2026-10-11T17:16:08.261860257Z 1:C 11 Oct 2026 17:16:08.261 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+2026-10-11T17:16:08.262495367Z 1:M 11 Oct 2026 17:16:08.262 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+2026-10-11T17:16:08.262517554Z 1:M 11 Oct 2026 17:16:08.262 * monotonic clock: POSIX clock_gettime
+2026-10-11T17:16:08.263374362Z 1:M 11 Oct 2026 17:16:08.263 * Running mode=standalone, port=6379.
+2026-10-11T17:16:08.263439712Z 1:M 11 Oct 2026 17:16:08.263 # Warning: Could not create server TCP listening socket *:6379: bind: Address in use
+2026-10-11T17:16:08.263445092Z 1:M 11 Oct 2026 17:16:08.263 # Failed listening on port 6379 (tcp), aborting.

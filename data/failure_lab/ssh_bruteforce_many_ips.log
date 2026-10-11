@@ -1,0 +1,113 @@
+2026-10-11T17:16:45.210482702Z Server listening on 0.0.0.0 port 22.
+2026-10-11T17:16:45.210503291Z Server listening on :: port 22.
+2026-10-11T17:16:45.527763930Z Accepted password for deploy from 172.18.0.3 port 35872 ssh2
+2026-10-11T17:16:45.575572289Z Received disconnect from 172.18.0.3 port 35872:11: disconnected by user
+2026-10-11T17:16:45.575667991Z Disconnected from user deploy 172.18.0.3 port 35872
+2026-10-11T17:16:46.716356841Z Failed password for root from 172.18.0.4 port 35384 ssh2
+2026-10-11T17:16:46.723035626Z Connection closed by authenticating user root 172.18.0.4 port 35384 [preauth]
+2026-10-11T17:16:46.840359905Z Failed password for root from 172.18.0.5 port 46948 ssh2
+2026-10-11T17:16:46.849444806Z Connection closed by authenticating user root 172.18.0.5 port 46948 [preauth]
+2026-10-11T17:16:46.916738174Z Invalid user admin from 172.18.0.4 port 35400
+2026-10-11T17:16:46.925394060Z Could not get shadow information for NOUSER
+2026-10-11T17:16:46.928658583Z Failed password for invalid user admin from 172.18.0.4 port 35400 ssh2
+2026-10-11T17:16:46.933003236Z Connection closed by invalid user admin 172.18.0.4 port 35400 [preauth]
+2026-10-11T17:16:46.969042945Z Failed password for root from 172.18.0.6 port 44154 ssh2
+2026-10-11T17:16:46.975395566Z Connection closed by authenticating user root 172.18.0.6 port 44154 [preauth]
+2026-10-11T17:16:47.034731382Z Invalid user ubuntu from 172.18.0.5 port 46956
+2026-10-11T17:16:47.042791610Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.046069953Z Failed password for invalid user ubuntu from 172.18.0.5 port 46956 ssh2
+2026-10-11T17:16:47.048458220Z Connection closed by invalid user ubuntu 172.18.0.5 port 46956 [preauth]
+2026-10-11T17:16:47.125383674Z Failed password for root from 172.18.0.4 port 35404 ssh2
+2026-10-11T17:16:47.134152986Z Connection closed by authenticating user root 172.18.0.4 port 35404 [preauth]
+2026-10-11T17:16:47.154879771Z Invalid user test from 172.18.0.6 port 44162
+2026-10-11T17:16:47.168620071Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.169190098Z Failed password for invalid user test from 172.18.0.6 port 44162 ssh2
+2026-10-11T17:16:47.178309980Z Connection closed by invalid user test 172.18.0.6 port 44162 [preauth]
+2026-10-11T17:16:47.240989034Z Failed password for root from 172.18.0.5 port 46960 ssh2
+2026-10-11T17:16:47.247305191Z Connection closed by authenticating user root 172.18.0.5 port 46960 [preauth]
+2026-10-11T17:16:47.312585781Z Invalid user admin from 172.18.0.4 port 35414
+2026-10-11T17:16:47.321222390Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.324463565Z Failed password for invalid user admin from 172.18.0.4 port 35414 ssh2
+2026-10-11T17:16:47.329743523Z Connection closed by invalid user admin 172.18.0.4 port 35414 [preauth]
+2026-10-11T17:16:47.373960889Z Failed password for root from 172.18.0.6 port 44166 ssh2
+2026-10-11T17:16:47.381181756Z Connection closed by authenticating user root 172.18.0.6 port 44166 [preauth]
+2026-10-11T17:16:47.432519270Z Invalid user ubuntu from 172.18.0.5 port 46972
+2026-10-11T17:16:47.440767724Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.444098662Z Failed password for invalid user ubuntu from 172.18.0.5 port 46972 ssh2
+2026-10-11T17:16:47.446541699Z Connection closed by invalid user ubuntu 172.18.0.5 port 46972 [preauth]
+2026-10-11T17:16:47.521457302Z Failed password for root from 172.18.0.4 port 35426 ssh2
+2026-10-11T17:16:47.527906705Z Connection closed by authenticating user root 172.18.0.4 port 35426 [preauth]
+2026-10-11T17:16:47.559984980Z Invalid user test from 172.18.0.6 port 44172
+2026-10-11T17:16:47.571857162Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.575090978Z Failed password for invalid user test from 172.18.0.6 port 44172 ssh2
+2026-10-11T17:16:47.582052376Z Connection closed by invalid user test 172.18.0.6 port 44172 [preauth]
+2026-10-11T17:16:47.645007998Z Failed password for root from 172.18.0.5 port 46976 ssh2
+2026-10-11T17:16:47.653990495Z Connection closed by authenticating user root 172.18.0.5 port 46976 [preauth]
+2026-10-11T17:16:47.705606626Z Invalid user admin from 172.18.0.4 port 35442
+2026-10-11T17:16:47.714188926Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.717508618Z Failed password for invalid user admin from 172.18.0.4 port 35442 ssh2
+2026-10-11T17:16:47.721823662Z Connection closed by invalid user admin 172.18.0.4 port 35442 [preauth]
+2026-10-11T17:16:47.778002974Z Failed password for root from 172.18.0.6 port 44176 ssh2
+2026-10-11T17:16:47.785964532Z Connection closed by authenticating user root 172.18.0.6 port 44176 [preauth]
+2026-10-11T17:16:47.832851040Z Invalid user ubuntu from 172.18.0.5 port 46978
+2026-10-11T17:16:47.839188729Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.842479782Z Failed password for invalid user ubuntu from 172.18.0.5 port 46978 ssh2
+2026-10-11T17:16:47.845669824Z Connection closed by invalid user ubuntu 172.18.0.5 port 46978 [preauth]
+2026-10-11T17:16:47.914912336Z Failed password for root from 172.18.0.4 port 35444 ssh2
+2026-10-11T17:16:47.922914784Z Connection closed by authenticating user root 172.18.0.4 port 35444 [preauth]
+2026-10-11T17:16:47.966572994Z Invalid user test from 172.18.0.6 port 44192
+2026-10-11T17:16:47.976877498Z Could not get shadow information for NOUSER
+2026-10-11T17:16:47.980111105Z Failed password for invalid user test from 172.18.0.6 port 44192 ssh2
+2026-10-11T17:16:47.986718463Z Connection closed by invalid user test 172.18.0.6 port 44192 [preauth]
+2026-10-11T17:16:48.040004731Z Failed password for root from 172.18.0.5 port 46980 ssh2
+2026-10-11T17:16:48.049052376Z Connection closed by authenticating user root 172.18.0.5 port 46980 [preauth]
+2026-10-11T17:16:48.109481172Z Invalid user admin from 172.18.0.4 port 35456
+2026-10-11T17:16:48.119811308Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.123052014Z Failed password for invalid user admin from 172.18.0.4 port 35456 ssh2
+2026-10-11T17:16:48.128242701Z Connection closed by invalid user admin 172.18.0.4 port 35456 [preauth]
+2026-10-11T17:16:48.178621757Z Failed password for root from 172.18.0.6 port 44194 ssh2
+2026-10-11T17:16:48.185721970Z Connection closed by authenticating user root 172.18.0.6 port 44194 [preauth]
+2026-10-11T17:16:48.226510477Z Invalid user ubuntu from 172.18.0.5 port 46994
+2026-10-11T17:16:48.233771596Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.237049332Z Failed password for invalid user ubuntu from 172.18.0.5 port 46994 ssh2
+2026-10-11T17:16:48.240108902Z Connection closed by invalid user ubuntu 172.18.0.5 port 46994 [preauth]
+2026-10-11T17:16:48.322654198Z Failed password for root from 172.18.0.4 port 35458 ssh2
+2026-10-11T17:16:48.328888314Z Connection closed by authenticating user root 172.18.0.4 port 35458 [preauth]
+2026-10-11T17:16:48.364504146Z Invalid user test from 172.18.0.6 port 44200
+2026-10-11T17:16:48.374870433Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.378104369Z Failed password for invalid user test from 172.18.0.6 port 44200 ssh2
+2026-10-11T17:16:48.384166879Z Connection closed by invalid user test 172.18.0.6 port 44200 [preauth]
+2026-10-11T17:16:48.434196620Z Failed password for root from 172.18.0.5 port 46996 ssh2
+2026-10-11T17:16:48.443041147Z Connection closed by authenticating user root 172.18.0.5 port 46996 [preauth]
+2026-10-11T17:16:48.510495805Z Invalid user admin from 172.18.0.4 port 35460
+2026-10-11T17:16:48.519836092Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.523083652Z Failed password for invalid user admin from 172.18.0.4 port 35460 ssh2
+2026-10-11T17:16:48.528530328Z Connection closed by invalid user admin 172.18.0.4 port 35460 [preauth]
+2026-10-11T17:16:48.578281303Z Failed password for root from 172.18.0.6 port 44204 ssh2
+2026-10-11T17:16:48.584459875Z Connection closed by authenticating user root 172.18.0.6 port 44204 [preauth]
+2026-10-11T17:16:48.622412743Z Invalid user ubuntu from 172.18.0.5 port 47006
+2026-10-11T17:16:48.629851195Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.633206040Z Failed password for invalid user ubuntu from 172.18.0.5 port 47006 ssh2
+2026-10-11T17:16:48.636214371Z Connection closed by invalid user ubuntu 172.18.0.5 port 47006 [preauth]
+2026-10-11T17:16:48.723082795Z Failed password for root from 172.18.0.4 port 35474 ssh2
+2026-10-11T17:16:48.729391514Z Connection closed by authenticating user root 172.18.0.4 port 35474 [preauth]
+2026-10-11T17:16:48.762792348Z Invalid user test from 172.18.0.6 port 44206
+2026-10-11T17:16:48.773321715Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.776580560Z Failed password for invalid user test from 172.18.0.6 port 44206 ssh2
+2026-10-11T17:16:48.782725404Z Connection closed by invalid user test 172.18.0.6 port 44206 [preauth]
+2026-10-11T17:16:48.834605365Z Failed password for root from 172.18.0.5 port 47020 ssh2
+2026-10-11T17:16:48.841087446Z Connection closed by authenticating user root 172.18.0.5 port 47020 [preauth]
+2026-10-11T17:16:48.908782418Z Invalid user admin from 172.18.0.4 port 35476
+2026-10-11T17:16:48.917218284Z Could not get shadow information for NOUSER
+2026-10-11T17:16:48.920470566Z Failed password for invalid user admin from 172.18.0.4 port 35476 ssh2
+2026-10-11T17:16:48.925267178Z Connection closed by invalid user admin 172.18.0.4 port 35476 [preauth]
+2026-10-11T17:16:48.977087040Z Failed password for root from 172.18.0.6 port 44208 ssh2
+2026-10-11T17:16:48.983265529Z Connection closed by authenticating user root 172.18.0.6 port 44208 [preauth]
+2026-10-11T17:16:49.024569432Z Invalid user ubuntu from 172.18.0.5 port 47036
+2026-10-11T17:16:49.031302388Z Could not get shadow information for NOUSER
+2026-10-11T17:16:49.034648602Z Failed password for invalid user ubuntu from 172.18.0.5 port 47036 ssh2
+2026-10-11T17:16:49.037528252Z Connection closed by invalid user ubuntu 172.18.0.5 port 47036 [preauth]
+2026-10-11T17:16:49.166506032Z Invalid user test from 172.18.0.6 port 44216
+2026-10-11T17:16:49.176790219Z Could not get shadow information for NOUSER
+2026-10-11T17:16:49.180009128Z Failed password for invalid user test from 172.18.0.6 port 44216 ssh2
+2026-10-11T17:16:49.188448783Z Connection closed by invalid user test 172.18.0.6 port 44216 [preauth]

@@ -1,0 +1,12 @@
+2026-10-11T17:15:59.529452290Z 2026-10-11 17:15:59,529 INFO billing: billing service starting as uid=1000
+2026-10-11T17:15:59.529480633Z Traceback (most recent call last):
+2026-10-11T17:15:59.529515488Z   File "/apps/logfile.py", line 10, in <module>
+2026-10-11T17:15:59.530125009Z     handler = logging.FileHandler(path)
+2026-10-11T17:15:59.530372458Z               ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-11T17:15:59.530417748Z   File "/usr/local/lib/python3.12/logging/__init__.py", line 1231, in __init__
+2026-10-11T17:15:59.530771765Z     StreamHandler.__init__(self, self._open())
+2026-10-11T17:15:59.530845315Z                                  ^^^^^^^^^^^^
+2026-10-11T17:15:59.530851242Z   File "/usr/local/lib/python3.12/logging/__init__.py", line 1263, in _open
+2026-10-11T17:15:59.531151537Z     return open_func(self.baseFilename, self.mode,
+2026-10-11T17:15:59.531155001Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-11T17:15:59.531156546Z PermissionError: [Errno 13] Permission denied: '/var/log/app/billing.log'

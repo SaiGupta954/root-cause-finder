@@ -1,0 +1,13 @@
+2026-10-11T17:16:24.455717526Z cache warmer: loading product catalog
+2026-10-11T17:16:24.520834041Z cached 200000 products
+2026-10-11T17:16:24.640444509Z 
+2026-10-11T17:16:24.640471154Z <--- Last few GCs --->
+2026-10-11T17:16:24.640473535Z 
+2026-10-11T17:16:24.640475373Z [1:0xff94d7390000]      173 ms: Scavenge (reduce) (interleaved) 47.2 (48.6) -> 47.2 (49.6) MB, pooled: 0 MB, 1.80 / 0.00 ms  (average mu = 0.700, current mu = 0.198) allocation failure; 
+2026-10-11T17:16:24.640478171Z [1:0xff94d7390000]      211 ms: Mark-Compact (reduce) 47.5 (49.6) -> 47.5 (49.8) MB, pooled: 0 MB, 37.18 / 0.00 ms  (+ 0.0 ms in 0 steps since start of marking, biggest step 0.0 ms, walltime since start of marking 43 ms) (average mu = 0.446, current mu = 
+2026-10-11T17:16:24.640479967Z 
+2026-10-11T17:16:24.640480969Z <--- JS stacktrace --->
+2026-10-11T17:16:24.640482097Z 
+2026-10-11T17:16:24.640483308Z FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+2026-10-11T17:16:24.640484602Z ----- Native stack trace -----
+2026-10-11T17:16:24.640485688Z 

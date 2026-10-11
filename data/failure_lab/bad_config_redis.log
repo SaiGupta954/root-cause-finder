@@ -1,0 +1,5 @@
+2026-10-11T17:16:26.341126592Z 
+2026-10-11T17:16:26.341144171Z *** FATAL CONFIG FILE ERROR (Redis 7.4.11) ***
+2026-10-11T17:16:26.341146384Z Reading the configuration file, at line 2
+2026-10-11T17:16:26.341147679Z >>> 'maxmemory 512mbx'
+2026-10-11T17:16:26.341149224Z argument must be a memory value

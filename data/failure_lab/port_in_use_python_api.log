@@ -1,0 +1,14 @@
+2026-10-11T17:16:14.873813071Z 2026-10-11 17:16:14,873 INFO metrics: starting on port 8000
+2026-10-11T17:16:14.883247376Z 2026-10-11 17:16:14,883 INFO metrics: listening on 0.0.0.0:8000
+2026-10-11T17:16:16.605329021Z 2026-10-11 17:16:16,605 INFO orders-api: starting on port 8000
+2026-10-11T17:16:16.605371382Z Traceback (most recent call last):
+2026-10-11T17:16:16.605374008Z   File "/apps/http_server.py", line 10, in <module>
+2026-10-11T17:16:16.605921481Z     server = http.server.HTTPServer(("0.0.0.0", port), http.server.SimpleHTTPRequestHandler)
+2026-10-11T17:16:16.606030717Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-11T17:16:16.606414378Z   File "/usr/local/lib/python3.12/socketserver.py", line 457, in __init__
+2026-10-11T17:16:16.606417838Z     self.server_bind()
+2026-10-11T17:16:16.606419048Z   File "/usr/local/lib/python3.12/http/server.py", line 140, in server_bind
+2026-10-11T17:16:16.606420257Z     socketserver.TCPServer.server_bind(self)
+2026-10-11T17:16:16.606421507Z   File "/usr/local/lib/python3.12/socketserver.py", line 478, in server_bind
+2026-10-11T17:16:16.606633267Z     self.socket.bind(self.server_address)
+2026-10-11T17:16:16.606637561Z OSError: [Errno 98] Address in use

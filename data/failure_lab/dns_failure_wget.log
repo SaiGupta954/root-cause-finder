@@ -1,0 +1,11 @@
+2026-10-11T17:13:41.528010739Z backup-agent: starting upload run
+2026-10-11T17:13:46.548293794Z wget: bad address 'example.com'
+2026-10-11T17:13:46.548433802Z upload 1 failed
+2026-10-11T17:13:52.568225191Z wget: bad address 'example.com'
+2026-10-11T17:13:52.568249481Z upload 2 failed
+2026-10-11T17:13:58.587046673Z wget: bad address 'example.com'
+2026-10-11T17:13:58.587197034Z upload 3 failed
+2026-10-11T17:14:04.607355020Z wget: bad address 'example.com'
+2026-10-11T17:14:04.608056615Z upload 4 failed
+2026-10-11T17:14:10.627869728Z wget: bad address 'example.com'
+2026-10-11T17:14:10.627989289Z upload 5 failed

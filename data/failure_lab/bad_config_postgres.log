@@ -1,0 +1,30 @@
+2026-10-11T17:16:26.775314170Z The files belonging to this database system will be owned by user "postgres".
+2026-10-11T17:16:26.775339348Z This user must also own the server process.
+2026-10-11T17:16:26.775341937Z 
+2026-10-11T17:16:26.775343315Z The database cluster will be initialized with locale "en_US.utf8".
+2026-10-11T17:16:26.775344609Z The default database encoding has accordingly been set to "UTF8".
+2026-10-11T17:16:26.775345904Z The default text search configuration will be set to "english".
+2026-10-11T17:16:26.775347115Z 
+2026-10-11T17:16:26.775348158Z Data page checksums are disabled.
+2026-10-11T17:16:26.775349244Z 
+2026-10-11T17:16:26.775350288Z fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2026-10-11T17:16:26.775730590Z creating subdirectories ... ok
+2026-10-11T17:16:26.775766166Z selecting dynamic shared memory implementation ... posix
+2026-10-11T17:16:26.786268956Z selecting default max_connections ... 100
+2026-10-11T17:16:26.798677936Z selecting default shared_buffers ... 128MB
+2026-10-11T17:16:26.823928017Z selecting default time zone ... UTC
+2026-10-11T17:16:26.824465985Z creating configuration files ... ok
+2026-10-11T17:16:26.914671150Z running bootstrap script ... ok
+2026-10-11T17:16:27.024975129Z sh: locale: not found
+2026-10-11T17:16:27.025032160Z 2026-10-11 17:16:27.024 UTC [35] WARNING:  no usable system locales were found
+2026-10-11T17:16:27.274507086Z performing post-bootstrap initialization ... ok
+2026-10-11T17:16:27.356645136Z syncing data to disk ... ok
+2026-10-11T17:16:27.356645261Z initdb: warning: enabling "trust" authentication for local connections
+2026-10-11T17:16:27.356682962Z 
+2026-10-11T17:16:27.356685216Z 
+2026-10-11T17:16:27.356686636Z Success. You can now start the database server using:
+2026-10-11T17:16:27.356688097Z 
+2026-10-11T17:16:27.356689224Z     pg_ctl -D /var/lib/postgresql/data -l logfile start
+2026-10-11T17:16:27.356690435Z 
+2026-10-11T17:16:27.356695529Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-10-11T17:16:27.364505058Z 2026-10-11 17:16:27.364 GMT [37] FATAL:  invalid value for parameter "shared_buffers": "lots"

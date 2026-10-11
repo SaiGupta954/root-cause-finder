@@ -9,3 +9,4 @@ data/*
 !data/README.md
 node_modules/
 *.db
+!data/failure_lab/

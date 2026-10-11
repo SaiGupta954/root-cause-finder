@@ -1,0 +1,7 @@
+2026-10-11T17:16:01.392304910Z 2026-10-11 17:16:01,392 INFO exporter: exporter starting, writing to /srv/uploads/report.jsonl
+2026-10-11T17:16:01.392349101Z 2026-10-11 17:16:01,392 ERROR exporter: batch 1 failed: [Errno 13] Permission denied: '/srv/uploads/report.jsonl'
+2026-10-11T17:16:01.603313119Z 2026-10-11 17:16:01,602 ERROR exporter: batch 2 failed: [Errno 13] Permission denied: '/srv/uploads/report.jsonl'
+2026-10-11T17:16:01.806577672Z 2026-10-11 17:16:01,805 ERROR exporter: batch 3 failed: [Errno 13] Permission denied: '/srv/uploads/report.jsonl'
+2026-10-11T17:16:02.007336244Z 2026-10-11 17:16:02,006 ERROR exporter: batch 4 failed: [Errno 13] Permission denied: '/srv/uploads/report.jsonl'
+2026-10-11T17:16:02.214729259Z 2026-10-11 17:16:02,213 ERROR exporter: batch 5 failed: [Errno 13] Permission denied: '/srv/uploads/report.jsonl'
+2026-10-11T17:16:02.214910008Z 2026-10-11 17:16:02,214 CRITICAL exporter: giving up after 5 failed batches

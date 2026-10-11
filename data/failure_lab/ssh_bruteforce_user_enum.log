@@ -1,0 +1,101 @@
+2026-10-11T17:16:37.153960449Z Server listening on 0.0.0.0 port 22.
+2026-10-11T17:16:37.154006350Z Server listening on :: port 22.
+2026-10-11T17:16:37.485116908Z Accepted password for deploy from 172.18.0.3 port 35862 ssh2
+2026-10-11T17:16:37.532758278Z Received disconnect from 172.18.0.3 port 35862:11: disconnected by user
+2026-10-11T17:16:37.532864412Z Disconnected from user deploy 172.18.0.3 port 35862
+2026-10-11T17:16:38.657164398Z Invalid user admin from 172.18.0.4 port 57850
+2026-10-11T17:16:38.665850601Z Could not get shadow information for NOUSER
+2026-10-11T17:16:38.669160317Z Failed password for invalid user admin from 172.18.0.4 port 57850 ssh2
+2026-10-11T17:16:38.675654144Z Connection closed by invalid user admin 172.18.0.4 port 57850 [preauth]
+2026-10-11T17:16:38.866211168Z Invalid user oracle from 172.18.0.4 port 57866
+2026-10-11T17:16:38.874661529Z Could not get shadow information for NOUSER
+2026-10-11T17:16:38.878854635Z Failed password for invalid user oracle from 172.18.0.4 port 57866 ssh2
+2026-10-11T17:16:38.883139039Z Connection closed by invalid user oracle 172.18.0.4 port 57866 [preauth]
+2026-10-11T17:16:39.074330877Z Invalid user test from 172.18.0.4 port 57874
+2026-10-11T17:16:39.085350505Z Could not get shadow information for NOUSER
+2026-10-11T17:16:39.088619245Z Failed password for invalid user test from 172.18.0.4 port 57874 ssh2
+2026-10-11T17:16:39.096735475Z Connection closed by invalid user test 172.18.0.4 port 57874 [preauth]
+2026-10-11T17:16:39.280683029Z Invalid user postgres from 172.18.0.4 port 57878
+2026-10-11T17:16:39.290303678Z Could not get shadow information for NOUSER
+2026-10-11T17:16:39.293527433Z Failed password for invalid user postgres from 172.18.0.4 port 57878 ssh2
+2026-10-11T17:16:39.299066424Z Connection closed by invalid user postgres 172.18.0.4 port 57878 [preauth]
+2026-10-11T17:16:39.481741755Z Invalid user ubuntu from 172.18.0.4 port 57886
+2026-10-11T17:16:39.488984485Z Could not get shadow information for NOUSER
+2026-10-11T17:16:39.492201934Z Failed password for invalid user ubuntu from 172.18.0.4 port 57886 ssh2
+2026-10-11T17:16:39.494634550Z Connection closed by invalid user ubuntu 172.18.0.4 port 57886 [preauth]
+2026-10-11T17:16:39.686092050Z Invalid user git from 172.18.0.4 port 57892
+2026-10-11T17:16:39.696344123Z Could not get shadow information for NOUSER
+2026-10-11T17:16:39.699608155Z Failed password for invalid user git from 172.18.0.4 port 57892 ssh2
+2026-10-11T17:16:39.708220981Z Connection closed by invalid user git 172.18.0.4 port 57892 [preauth]
+2026-10-11T17:16:39.898297833Z Invalid user admin from 172.18.0.4 port 57908
+2026-10-11T17:16:39.907152777Z Could not get shadow information for NOUSER
+2026-10-11T17:16:39.910376617Z Failed password for invalid user admin from 172.18.0.4 port 57908 ssh2
+2026-10-11T17:16:39.916027691Z Connection closed by invalid user admin 172.18.0.4 port 57908 [preauth]
+2026-10-11T17:16:40.105976013Z Invalid user oracle from 172.18.0.4 port 57910
+2026-10-11T17:16:40.114322073Z Could not get shadow information for NOUSER
+2026-10-11T17:16:40.117567086Z Failed password for invalid user oracle from 172.18.0.4 port 57910 ssh2
+2026-10-11T17:16:40.123350885Z Connection closed by invalid user oracle 172.18.0.4 port 57910 [preauth]
+2026-10-11T17:16:40.307920742Z Invalid user test from 172.18.0.4 port 57912
+2026-10-11T17:16:40.318294983Z Could not get shadow information for NOUSER
+2026-10-11T17:16:40.321686651Z Failed password for invalid user test from 172.18.0.4 port 57912 ssh2
+2026-10-11T17:16:40.330327239Z Connection closed by invalid user test 172.18.0.4 port 57912 [preauth]
+2026-10-11T17:16:40.516418326Z Invalid user postgres from 172.18.0.4 port 57918
+2026-10-11T17:16:40.525264366Z Could not get shadow information for NOUSER
+2026-10-11T17:16:40.528490648Z Failed password for invalid user postgres from 172.18.0.4 port 57918 ssh2
+2026-10-11T17:16:40.535427779Z Connection closed by invalid user postgres 172.18.0.4 port 57918 [preauth]
+2026-10-11T17:16:40.725129467Z Invalid user ubuntu from 172.18.0.4 port 57932
+2026-10-11T17:16:40.731860685Z Could not get shadow information for NOUSER
+2026-10-11T17:16:40.735095283Z Failed password for invalid user ubuntu from 172.18.0.4 port 57932 ssh2
+2026-10-11T17:16:40.738298929Z Connection closed by invalid user ubuntu 172.18.0.4 port 57932 [preauth]
+2026-10-11T17:16:40.928052820Z Invalid user git from 172.18.0.4 port 57948
+2026-10-11T17:16:40.938375404Z Could not get shadow information for NOUSER
+2026-10-11T17:16:40.941638854Z Failed password for invalid user git from 172.18.0.4 port 57948 ssh2
+2026-10-11T17:16:40.950280702Z Connection closed by invalid user git 172.18.0.4 port 57948 [preauth]
+2026-10-11T17:16:41.136249908Z Invalid user admin from 172.18.0.4 port 57954
+2026-10-11T17:16:41.145047507Z Could not get shadow information for NOUSER
+2026-10-11T17:16:41.148557769Z Failed password for invalid user admin from 172.18.0.4 port 57954 ssh2
+2026-10-11T17:16:41.153896674Z Connection closed by invalid user admin 172.18.0.4 port 57954 [preauth]
+2026-10-11T17:16:41.342853584Z Invalid user oracle from 172.18.0.4 port 57966
+2026-10-11T17:16:41.351126994Z Could not get shadow information for NOUSER
+2026-10-11T17:16:41.354400777Z Failed password for invalid user oracle from 172.18.0.4 port 57966 ssh2
+2026-10-11T17:16:41.359996133Z Connection closed by invalid user oracle 172.18.0.4 port 57966 [preauth]
+2026-10-11T17:16:41.540204786Z Invalid user test from 172.18.0.4 port 57980
+2026-10-11T17:16:41.550349888Z Could not get shadow information for NOUSER
+2026-10-11T17:16:41.553602482Z Failed password for invalid user test from 172.18.0.4 port 57980 ssh2
+2026-10-11T17:16:41.561809849Z Connection closed by invalid user test 172.18.0.4 port 57980 [preauth]
+2026-10-11T17:16:41.749734114Z Invalid user postgres from 172.18.0.4 port 57984
+2026-10-11T17:16:41.758607743Z Could not get shadow information for NOUSER
+2026-10-11T17:16:41.761871666Z Failed password for invalid user postgres from 172.18.0.4 port 57984 ssh2
+2026-10-11T17:16:41.767153087Z Connection closed by invalid user postgres 172.18.0.4 port 57984 [preauth]
+2026-10-11T17:16:41.956960163Z Invalid user ubuntu from 172.18.0.4 port 57996
+2026-10-11T17:16:41.963273264Z Could not get shadow information for NOUSER
+2026-10-11T17:16:41.966522963Z Failed password for invalid user ubuntu from 172.18.0.4 port 57996 ssh2
+2026-10-11T17:16:41.968925307Z Connection closed by invalid user ubuntu 172.18.0.4 port 57996 [preauth]
+2026-10-11T17:16:42.155297286Z Invalid user git from 172.18.0.4 port 58010
+2026-10-11T17:16:42.165473099Z Could not get shadow information for NOUSER
+2026-10-11T17:16:42.168770985Z Failed password for invalid user git from 172.18.0.4 port 58010 ssh2
+2026-10-11T17:16:42.177371139Z Connection closed by invalid user git 172.18.0.4 port 58010 [preauth]
+2026-10-11T17:16:42.364795616Z Invalid user admin from 172.18.0.4 port 58018
+2026-10-11T17:16:42.373357409Z Could not get shadow information for NOUSER
+2026-10-11T17:16:42.376604021Z Failed password for invalid user admin from 172.18.0.4 port 58018 ssh2
+2026-10-11T17:16:42.383065928Z Connection closed by invalid user admin 172.18.0.4 port 58018 [preauth]
+2026-10-11T17:16:42.563803279Z Invalid user oracle from 172.18.0.4 port 58030
+2026-10-11T17:16:42.572131844Z Could not get shadow information for NOUSER
+2026-10-11T17:16:42.575445955Z Failed password for invalid user oracle from 172.18.0.4 port 58030 ssh2
+2026-10-11T17:16:42.580970047Z Connection closed by invalid user oracle 172.18.0.4 port 58030 [preauth]
+2026-10-11T17:16:42.759831432Z Invalid user test from 172.18.0.4 port 58034
+2026-10-11T17:16:42.770210496Z Could not get shadow information for NOUSER
+2026-10-11T17:16:42.773547246Z Failed password for invalid user test from 172.18.0.4 port 58034 ssh2
+2026-10-11T17:16:42.781867888Z Connection closed by invalid user test 172.18.0.4 port 58034 [preauth]
+2026-10-11T17:16:42.971911280Z Invalid user postgres from 172.18.0.4 port 58038
+2026-10-11T17:16:42.981033355Z Could not get shadow information for NOUSER
+2026-10-11T17:16:42.984270660Z Failed password for invalid user postgres from 172.18.0.4 port 58038 ssh2
+2026-10-11T17:16:42.991229962Z Connection closed by invalid user postgres 172.18.0.4 port 58038 [preauth]
+2026-10-11T17:16:43.179621991Z Invalid user ubuntu from 172.18.0.4 port 58052
+2026-10-11T17:16:43.186359773Z Could not get shadow information for NOUSER
+2026-10-11T17:16:43.189610666Z Failed password for invalid user ubuntu from 172.18.0.4 port 58052 ssh2
+2026-10-11T17:16:43.192781707Z Connection closed by invalid user ubuntu 172.18.0.4 port 58052 [preauth]
+2026-10-11T17:16:43.381782999Z Invalid user git from 172.18.0.4 port 58056
+2026-10-11T17:16:43.391996859Z Could not get shadow information for NOUSER
+2026-10-11T17:16:43.395352783Z Failed password for invalid user git from 172.18.0.4 port 58056 ssh2
+2026-10-11T17:16:43.403705412Z Connection closed by invalid user git 172.18.0.4 port 58056 [preauth]

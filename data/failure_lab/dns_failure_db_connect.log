@@ -1,0 +1,9 @@
+2026-10-11T17:14:34.279112682Z 2026-10-11 17:14:34,278 INFO orders-api: orders-api starting, database at example.com:80
+2026-10-11T17:14:34.287480015Z 2026-10-11 17:14:34,287 ERROR orders-api: could not connect to database example.com:80 (attempt 1): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:36.298593621Z 2026-10-11 17:14:36,298 ERROR orders-api: could not connect to database example.com:80 (attempt 2): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:38.305773659Z 2026-10-11 17:14:38,305 ERROR orders-api: could not connect to database example.com:80 (attempt 3): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:40.311889693Z 2026-10-11 17:14:40,311 ERROR orders-api: could not connect to database example.com:80 (attempt 4): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:42.315636461Z 2026-10-11 17:14:42,315 ERROR orders-api: could not connect to database example.com:80 (attempt 5): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:44.319276558Z 2026-10-11 17:14:44,319 ERROR orders-api: could not connect to database example.com:80 (attempt 6): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:46.224761677Z 2026-10-11 17:14:46,224 ERROR orders-api: could not connect to database example.com:80 (attempt 7): [Errno -3] Temporary failure in name resolution
+2026-10-11T17:14:48.231963322Z 2026-10-11 17:14:48,231 ERROR orders-api: could not connect to database example.com:80 (attempt 8): [Errno -3] Temporary failure in name resolution

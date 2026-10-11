@@ -1,0 +1,48 @@
+2026-10-11T17:15:07.149579882Z 2026-10-11 17:15:07,149 INFO Set uid to user 0 succeeded
+2026-10-11T17:15:07.150705048Z 2026-10-11 17:15:07,150 INFO supervisord started with pid 1
+2026-10-11T17:15:08.161594673Z 2026-10-11 17:15:08,161 INFO spawned: 'app' with pid 7
+2026-10-11T17:15:08.187430368Z 2026-10-11 17:15:08,187 INFO worker: worker booting, pid=7
+2026-10-11T17:15:08.187449729Z Traceback (most recent call last):
+2026-10-11T17:15:08.187451707Z   File "/apps/needs_env.py", line 9, in <module>
+2026-10-11T17:15:08.187828159Z     db_url = os.environ["DATABASE_URL"]
+2026-10-11T17:15:08.187893272Z              ~~~~~~~~~~^^^^^^^^^^^^^^^^
+2026-10-11T17:15:08.187899081Z   File "<frozen os>", line 714, in __getitem__
+2026-10-11T17:15:08.187901101Z KeyError: 'DATABASE_URL'
+2026-10-11T17:15:08.192856385Z 2026-10-11 17:15:08,192 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:09.205199555Z 2026-10-11 17:15:09,204 INFO spawned: 'app' with pid 8
+2026-10-11T17:15:09.231645522Z 2026-10-11 17:15:09,231 INFO worker: worker booting, pid=8
+2026-10-11T17:15:09.231677346Z Traceback (most recent call last):
+2026-10-11T17:15:09.231679153Z   File "/apps/needs_env.py", line 9, in <module>
+2026-10-11T17:15:09.231893934Z     db_url = os.environ["DATABASE_URL"]
+2026-10-11T17:15:09.231965275Z              ~~~~~~~~~~^^^^^^^^^^^^^^^^
+2026-10-11T17:15:09.231970151Z   File "<frozen os>", line 714, in __getitem__
+2026-10-11T17:15:09.231971749Z KeyError: 'DATABASE_URL'
+2026-10-11T17:15:09.237098014Z 2026-10-11 17:15:09,236 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:11.245542380Z 2026-10-11 17:15:11,244 INFO spawned: 'app' with pid 9
+2026-10-11T17:15:11.279720814Z 2026-10-11 17:15:11,279 INFO worker: worker booting, pid=9
+2026-10-11T17:15:11.279739863Z Traceback (most recent call last):
+2026-10-11T17:15:11.279741835Z   File "/apps/needs_env.py", line 9, in <module>
+2026-10-11T17:15:11.280212467Z     db_url = os.environ["DATABASE_URL"]
+2026-10-11T17:15:11.280275528Z              ~~~~~~~~~~^^^^^^^^^^^^^^^^
+2026-10-11T17:15:11.280279430Z   File "<frozen os>", line 714, in __getitem__
+2026-10-11T17:15:11.280281151Z KeyError: 'DATABASE_URL'
+2026-10-11T17:15:11.285073277Z 2026-10-11 17:15:11,284 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:14.310781065Z 2026-10-11 17:15:14,310 INFO spawned: 'app' with pid 10
+2026-10-11T17:15:14.342956188Z 2026-10-11 17:15:14,342 INFO worker: worker booting, pid=10
+2026-10-11T17:15:14.342992278Z Traceback (most recent call last):
+2026-10-11T17:15:14.342994413Z   File "/apps/needs_env.py", line 9, in <module>
+2026-10-11T17:15:14.343209155Z     db_url = os.environ["DATABASE_URL"]
+2026-10-11T17:15:14.343267309Z              ~~~~~~~~~~^^^^^^^^^^^^^^^^
+2026-10-11T17:15:14.343302646Z   File "<frozen os>", line 714, in __getitem__
+2026-10-11T17:15:14.343305619Z KeyError: 'DATABASE_URL'
+2026-10-11T17:15:14.348160517Z 2026-10-11 17:15:14,348 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:18.386770647Z 2026-10-11 17:15:18,386 INFO spawned: 'app' with pid 11
+2026-10-11T17:15:18.422107807Z 2026-10-11 17:15:18,421 INFO worker: worker booting, pid=11
+2026-10-11T17:15:18.422145630Z Traceback (most recent call last):
+2026-10-11T17:15:18.422148347Z   File "/apps/needs_env.py", line 9, in <module>
+2026-10-11T17:15:18.422495901Z     db_url = os.environ["DATABASE_URL"]
+2026-10-11T17:15:18.422640004Z              ~~~~~~~~~~^^^^^^^^^^^^^^^^
+2026-10-11T17:15:18.422650118Z   File "<frozen os>", line 714, in __getitem__
+2026-10-11T17:15:18.422652375Z KeyError: 'DATABASE_URL'
+2026-10-11T17:15:18.427913532Z 2026-10-11 17:15:18,427 WARN exited: app (exit status 1; not expected)
+2026-10-11T17:15:19.440476842Z 2026-10-11 17:15:19,439 INFO gave up: app entered FATAL state, too many start retries too quickly

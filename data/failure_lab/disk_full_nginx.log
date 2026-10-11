@@ -1,0 +1,14 @@
+2026-10-11T17:13:31.724180913Z 2026/10/11 17:13:31 [notice] 1#1: using the "epoll" event method
+2026-10-11T17:13:31.724205716Z 2026/10/11 17:13:31 [notice] 1#1: nginx/1.27.5
+2026-10-11T17:13:31.724208222Z 2026/10/11 17:13:31 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2026-10-11T17:13:31.724209725Z 2026/10/11 17:13:31 [notice] 1#1: OS: Linux 6.8.0-117-generic
+2026-10-11T17:13:31.724210977Z 2026/10/11 17:13:31 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2026-10-11T17:13:31.724731971Z 2026/10/11 17:13:31 [notice] 1#1: start worker processes
+2026-10-11T17:13:31.724872899Z 2026/10/11 17:13:31 [notice] 1#1: start worker process 8
+2026-10-11T17:13:31.725246660Z 2026/10/11 17:13:31 [notice] 1#1: start worker process 9
+2026-10-11T17:13:31.725264573Z 2026/10/11 17:13:31 [notice] 1#1: start worker process 10
+2026-10-11T17:13:31.725267204Z 2026/10/11 17:13:31 [notice] 1#1: start worker process 11
+2026-10-11T17:13:34.284763515Z 2026/10/11 17:13:34 [alert] 10#10: *2710 write() to "/var/log/web/access.log" was incomplete: 97 of 115 while logging request, client: 127.0.0.1, server: localhost, request: "GET /?page=2710&q=taqdjtdvcrvcdriinfm HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:13:34.298478850Z 2026/10/11 17:13:34 [alert] 11#11: *2725 write() to "/var/log/web/access.log" failed (28: No space left on device) while logging request, client: 127.0.0.1, server: localhost, request: "GET /?page=2725&q=yjnidhxkzglzrkrjqoj HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:13:34.313428624Z 2026/10/11 17:13:34 [alert] 9#9: *2741 write() to "/var/log/web/access.log" failed (28: No space left on device) while logging request, client: 127.0.0.1, server: localhost, request: "GET /?page=2741&q=zpvmkagxhyxohihtk HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:13:34.328122571Z 2026/10/11 17:13:34 [alert] 8#8: *2757 write() to "/var/log/web/access.log" failed (28: No space left on device) while logging request, client: 127.0.0.1, server: localhost, request: "GET /?page=2757&q=mvmvsfbvnahkiociekfretjkmrbx HTTP/1.1", host: "127.0.0.1"

@@ -1,0 +1,18 @@
+2026-10-11T17:15:57.669798696Z 2026/10/11 17:15:57 [notice] 1#1: using the "epoll" event method
+2026-10-11T17:15:57.669887184Z 2026/10/11 17:15:57 [notice] 1#1: nginx/1.27.5
+2026-10-11T17:15:57.669890566Z 2026/10/11 17:15:57 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+2026-10-11T17:15:57.669891945Z 2026/10/11 17:15:57 [notice] 1#1: OS: Linux 6.8.0-117-generic
+2026-10-11T17:15:57.669893323Z 2026/10/11 17:15:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+2026-10-11T17:15:57.670376935Z 2026/10/11 17:15:57 [notice] 1#1: start worker processes
+2026-10-11T17:15:57.670471185Z 2026/10/11 17:15:57 [notice] 1#1: start worker process 8
+2026-10-11T17:15:57.670565477Z 2026/10/11 17:15:57 [notice] 1#1: start worker process 9
+2026-10-11T17:15:57.670693845Z 2026/10/11 17:15:57 [notice] 1#1: start worker process 10
+2026-10-11T17:15:57.670700276Z 2026/10/11 17:15:57 [notice] 1#1: start worker process 11
+2026-10-11T17:15:57.729319471Z 2026/10/11 17:15:57 [error] 9#9: *1 "/usr/share/nginx/html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:15:57.729558207Z 127.0.0.1 - - [11/Oct/2026:17:15:57 +0000] "GET / HTTP/1.1" 403 153 "-" "Wget" "-"
+2026-10-11T17:15:57.776283320Z 2026/10/11 17:15:57 [error] 8#8: *2 open() "/usr/share/nginx/html/index.html" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:15:57.776312885Z 127.0.0.1 - - [11/Oct/2026:17:15:57 +0000] "GET /index.html HTTP/1.1" 403 153 "-" "Wget" "-"
+2026-10-11T17:15:57.819403785Z 2026/10/11 17:15:57 [error] 10#10: *3 open() "/usr/share/nginx/html/about.html" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /about.html HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:15:57.819562344Z 127.0.0.1 - - [11/Oct/2026:17:15:57 +0000] "GET /about.html HTTP/1.1" 403 153 "-" "Wget" "-"
+2026-10-11T17:15:57.863579795Z 2026/10/11 17:15:57 [error] 11#11: *4 "/usr/share/nginx/html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2026-10-11T17:15:57.863581549Z 127.0.0.1 - - [11/Oct/2026:17:15:57 +0000] "GET / HTTP/1.1" 403 153 "-" "Wget" "-"

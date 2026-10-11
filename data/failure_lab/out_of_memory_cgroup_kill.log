@@ -1,0 +1,6 @@
+2026-10-11T17:16:18.184846107Z 2026-10-11 17:16:18,184 INFO report-builder: building monthly report
+2026-10-11T17:16:18.188757190Z 2026-10-11 17:16:18,188 INFO report-builder: loaded 20 MB of rows
+2026-10-11T17:16:18.192002521Z 2026-10-11 17:16:18,191 INFO report-builder: loaded 40 MB of rows
+2026-10-11T17:16:18.198811533Z 2026-10-11 17:16:18,198 INFO report-builder: loaded 60 MB of rows
+2026-10-11T17:16:18.204979412Z 2026-10-11 17:16:18,204 INFO report-builder: loaded 80 MB of rows
+2026-10-11T17:16:18.212367400Z bash: line 1:     7 Killed                  python -u /apps/alloc.py

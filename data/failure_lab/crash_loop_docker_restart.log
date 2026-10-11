@@ -1,0 +1,138 @@
+2026-10-11T17:15:53.140378715Z api: loading config from /etc/api/config.json
+2026-10-11T17:15:53.141392726Z node:internal/modules/cjs/loader:1433
+2026-10-11T17:15:53.141402049Z   throw err;
+2026-10-11T17:15:53.141403554Z   ^
+2026-10-11T17:15:53.141404683Z 
+2026-10-11T17:15:53.141405854Z Error: Cannot find module '/etc/api/config.json'
+2026-10-11T17:15:53.141407066Z Require stack:
+2026-10-11T17:15:53.141408112Z - /[eval]
+2026-10-11T17:15:53.141409157Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-10-11T17:15:53.141425630Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-10-11T17:15:53.141427219Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-10-11T17:15:53.141428431Z     at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-10-11T17:15:53.141429602Z     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-11T17:15:53.141430689Z     at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-10-11T17:15:53.141431818Z     at require (node:internal/modules/helpers:147:16)
+2026-10-11T17:15:53.141432946Z     at [eval]:1:63
+2026-10-11T17:15:53.141434034Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-10-11T17:15:53.141435162Z     at node:internal/process/execution:446:12 {
+2026-10-11T17:15:53.141436249Z   code: 'MODULE_NOT_FOUND',
+2026-10-11T17:15:53.141437337Z   requireStack: [ '/[eval]' ]
+2026-10-11T17:15:53.141438424Z }
+2026-10-11T17:15:53.141439720Z 
+2026-10-11T17:15:53.141440765Z Node.js v22.23.3
+2026-10-11T17:15:53.356595245Z api: loading config from /etc/api/config.json
+2026-10-11T17:15:53.357585632Z node:internal/modules/cjs/loader:1433
+2026-10-11T17:15:53.357592154Z   throw err;
+2026-10-11T17:15:53.357594161Z   ^
+2026-10-11T17:15:53.357595834Z 
+2026-10-11T17:15:53.357597381Z Error: Cannot find module '/etc/api/config.json'
+2026-10-11T17:15:53.357598969Z Require stack:
+2026-10-11T17:15:53.357600433Z - /[eval]
+2026-10-11T17:15:53.357601854Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-10-11T17:15:53.357603527Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-10-11T17:15:53.357605157Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-10-11T17:15:53.357606830Z     at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-10-11T17:15:53.357608335Z     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-11T17:15:53.357609840Z     at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-10-11T17:15:53.357611345Z     at require (node:internal/modules/helpers:147:16)
+2026-10-11T17:15:53.357620501Z     at [eval]:1:63
+2026-10-11T17:15:53.357621881Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-10-11T17:15:53.357623052Z     at node:internal/process/execution:446:12 {
+2026-10-11T17:15:53.357624139Z   code: 'MODULE_NOT_FOUND',
+2026-10-11T17:15:53.357625268Z   requireStack: [ '/[eval]' ]
+2026-10-11T17:15:53.357626355Z }
+2026-10-11T17:15:53.357627358Z 
+2026-10-11T17:15:53.357628403Z Node.js v22.23.3
+2026-10-11T17:15:53.675953864Z api: loading config from /etc/api/config.json
+2026-10-11T17:15:53.676078791Z node:internal/modules/cjs/loader:1433
+2026-10-11T17:15:53.676086568Z   throw err;
+2026-10-11T17:15:53.676088658Z   ^
+2026-10-11T17:15:53.676090289Z 
+2026-10-11T17:15:53.676091878Z Error: Cannot find module '/etc/api/config.json'
+2026-10-11T17:15:53.676093466Z Require stack:
+2026-10-11T17:15:53.676095055Z - /[eval]
+2026-10-11T17:15:53.676096560Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-10-11T17:15:53.676098233Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-10-11T17:15:53.676099780Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-10-11T17:15:53.676101452Z     at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-10-11T17:15:53.676102999Z     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-11T17:15:53.676104504Z     at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-10-11T17:15:53.676106009Z     at require (node:internal/modules/helpers:147:16)
+2026-10-11T17:15:53.676120224Z     at [eval]:1:63
+2026-10-11T17:15:53.676121897Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-10-11T17:15:53.676123444Z     at node:internal/process/execution:446:12 {
+2026-10-11T17:15:53.676124865Z   code: 'MODULE_NOT_FOUND',
+2026-10-11T17:15:53.676126287Z   requireStack: [ '/[eval]' ]
+2026-10-11T17:15:53.676127876Z }
+2026-10-11T17:15:53.676129214Z 
+2026-10-11T17:15:53.676130593Z Node.js v22.23.3
+2026-10-11T17:15:54.206372058Z api: loading config from /etc/api/config.json
+2026-10-11T17:15:54.207315107Z node:internal/modules/cjs/loader:1433
+2026-10-11T17:15:54.207342858Z   throw err;
+2026-10-11T17:15:54.207344822Z   ^
+2026-10-11T17:15:54.207346327Z 
+2026-10-11T17:15:54.207347832Z Error: Cannot find module '/etc/api/config.json'
+2026-10-11T17:15:54.207349462Z Require stack:
+2026-10-11T17:15:54.207350924Z - /[eval]
+2026-10-11T17:15:54.207352304Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-10-11T17:15:54.207361833Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-10-11T17:15:54.207363254Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-10-11T17:15:54.207364466Z     at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-10-11T17:15:54.207365636Z     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-11T17:15:54.207366806Z     at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-10-11T17:15:54.207367977Z     at require (node:internal/modules/helpers:147:16)
+2026-10-11T17:15:54.207369314Z     at [eval]:1:63
+2026-10-11T17:15:54.207370442Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-10-11T17:15:54.207371613Z     at node:internal/process/execution:446:12 {
+2026-10-11T17:15:54.207372657Z   code: 'MODULE_NOT_FOUND',
+2026-10-11T17:15:54.207373828Z   requireStack: [ '/[eval]' ]
+2026-10-11T17:15:54.207374873Z }
+2026-10-11T17:15:54.207375917Z 
+2026-10-11T17:15:54.207376921Z Node.js v22.23.3
+2026-10-11T17:15:55.137669836Z api: loading config from /etc/api/config.json
+2026-10-11T17:15:55.138523798Z node:internal/modules/cjs/loader:1433
+2026-10-11T17:15:55.138531319Z   throw err;
+2026-10-11T17:15:55.138533324Z   ^
+2026-10-11T17:15:55.138535037Z 
+2026-10-11T17:15:55.138536625Z Error: Cannot find module '/etc/api/config.json'
+2026-10-11T17:15:55.138538213Z Require stack:
+2026-10-11T17:15:55.138539800Z - /[eval]
+2026-10-11T17:15:55.138541346Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-10-11T17:15:55.138542976Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-10-11T17:15:55.138544522Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-10-11T17:15:55.138546068Z     at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-10-11T17:15:55.138547613Z     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-11T17:15:55.138549118Z     at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-10-11T17:15:55.138550622Z     at require (node:internal/modules/helpers:147:16)
+2026-10-11T17:15:55.138552168Z     at [eval]:1:63
+2026-10-11T17:15:55.138553630Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-10-11T17:15:55.138555259Z     at node:internal/process/execution:446:12 {
+2026-10-11T17:15:55.138556764Z   code: 'MODULE_NOT_FOUND',
+2026-10-11T17:15:55.138558268Z   requireStack: [ '/[eval]' ]
+2026-10-11T17:15:55.138559688Z }
+2026-10-11T17:15:55.138561067Z 
+2026-10-11T17:15:55.138562947Z Node.js v22.23.3
+2026-10-11T17:15:56.868248978Z api: loading config from /etc/api/config.json
+2026-10-11T17:15:56.869136242Z node:internal/modules/cjs/loader:1433
+2026-10-11T17:15:56.869143009Z   throw err;
+2026-10-11T17:15:56.869144554Z   ^
+2026-10-11T17:15:56.869145682Z 
+2026-10-11T17:15:56.869146768Z Error: Cannot find module '/etc/api/config.json'
+2026-10-11T17:15:56.869147979Z Require stack:
+2026-10-11T17:15:56.869149065Z - /[eval]
+2026-10-11T17:15:56.869150110Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-10-11T17:15:56.869151363Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-10-11T17:15:56.869152490Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-10-11T17:15:56.869153618Z     at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-10-11T17:15:56.869154746Z     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-10-11T17:15:56.869155832Z     at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-10-11T17:15:56.869156918Z     at require (node:internal/modules/helpers:147:16)
+2026-10-11T17:15:56.869158046Z     at [eval]:1:63
+2026-10-11T17:15:56.869159132Z     at runScriptInThisContext (node:internal/vm:209:10)
+2026-10-11T17:15:56.869160260Z     at node:internal/process/execution:446:12 {
+2026-10-11T17:15:56.869161346Z   code: 'MODULE_NOT_FOUND',
+2026-10-11T17:15:56.869162891Z   requireStack: [ '/[eval]' ]
+2026-10-11T17:15:56.869163935Z }
+2026-10-11T17:15:56.869164980Z 
+2026-10-11T17:15:56.869165982Z Node.js v22.23.3

@@ -1,0 +1,17 @@
+2026-10-11T17:16:19.656665884Z 2026-10-11 17:16:19,656 INFO report-builder: building monthly report
+2026-10-11T17:16:19.660081852Z 2026-10-11 17:16:19,659 INFO report-builder: loaded 20 MB of rows
+2026-10-11T17:16:19.663293912Z 2026-10-11 17:16:19,663 INFO report-builder: loaded 40 MB of rows
+2026-10-11T17:16:19.666476799Z 2026-10-11 17:16:19,666 INFO report-builder: loaded 60 MB of rows
+2026-10-11T17:16:19.669869071Z 2026-10-11 17:16:19,669 INFO report-builder: loaded 80 MB of rows
+2026-10-11T17:16:19.673861619Z 2026-10-11 17:16:19,673 INFO report-builder: loaded 100 MB of rows
+2026-10-11T17:16:19.680143933Z 2026-10-11 17:16:19,680 INFO report-builder: loaded 120 MB of rows
+2026-10-11T17:16:19.686268185Z 2026-10-11 17:16:19,686 INFO report-builder: loaded 140 MB of rows
+2026-10-11T17:16:19.692590705Z 2026-10-11 17:16:19,692 INFO report-builder: loaded 160 MB of rows
+2026-10-11T17:16:19.698827966Z 2026-10-11 17:16:19,698 INFO report-builder: loaded 180 MB of rows
+2026-10-11T17:16:19.705112662Z 2026-10-11 17:16:19,704 INFO report-builder: loaded 200 MB of rows
+2026-10-11T17:16:19.711389126Z 2026-10-11 17:16:19,711 INFO report-builder: loaded 220 MB of rows
+2026-10-11T17:16:19.714477101Z Traceback (most recent call last):
+2026-10-11T17:16:19.714482074Z   File "/apps/alloc.py", line 10, in <module>
+2026-10-11T17:16:19.714923787Z     rows.append(bytearray(10 * 1024 * 1024))
+2026-10-11T17:16:19.714938999Z                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-11T17:16:19.714978954Z MemoryError

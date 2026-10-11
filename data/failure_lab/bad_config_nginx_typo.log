@@ -1,0 +1,2 @@
+2026-10-11T17:16:25.868528915Z 2026/10/11 17:16:25 [emerg] 1#1: unknown directive "listn" in /etc/nginx/conf.d/default.conf:2
+2026-10-11T17:16:25.868555266Z nginx: [emerg] unknown directive "listn" in /etc/nginx/conf.d/default.conf:2
