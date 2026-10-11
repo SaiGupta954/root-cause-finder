@@ -9,4 +9,7 @@ Many "Failed password for root/invalid user" lines from the same or a few IP add
 An automated attacker or a misconfigured client is guessing usernames and passwords over SSH.
 
 ## Fix
-Block the source IPs (firewall, fail2ban). Disable password login (`PasswordAuthentication no`) and root login (`PermitRootLogin no`), use keys, and move or rate-limit SSH. Check `last` for any successful logins from those IPs.
+- Block the source IPs (firewall rule or fail2ban).
+- Disable password and root login: `PasswordAuthentication no`, `PermitRootLogin no`; use SSH keys.
+- Check `last` and `lastb` for any successful logins from those IPs.
+- Rate-limit or restrict SSH to known networks (VPN, bastion).

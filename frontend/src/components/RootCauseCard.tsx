@@ -52,7 +52,9 @@ export default function RootCauseCard({ analysis }: { analysis: Analysis }) {
       {sure ? (
         <div className="rc-meta">
           <span className="chip chip-strong">{title(rc.category)}</span>
-          {rc.alternatives.map((a) => <span key={a} className="chip">or {title(a)}</span>)}
+          {rc.alternatives.length > 0 && (
+            <span className="small muted">Less likely: {rc.alternatives.map(title).join(", ")}</span>
+          )}
           <span className="confidence" title="The model's confidence, reduced for every evidence line that failed the check">
             <span className="meter" aria-hidden="true"><span style={{ width: `${pct}%` }} /></span>
             {pct}% confidence
@@ -87,21 +89,23 @@ export default function RootCauseCard({ analysis }: { analysis: Analysis }) {
 
       {rc.next_steps.length > 0 && (
         <>
-          <h3>Next steps</h3>
+          <h3>Next steps{rc.next_steps_source ? ` · from the “${title(rc.next_steps_source)}” card` : ""}</h3>
           <ul className="steps">{rc.next_steps.map((s) => <li key={s}><Step text={s} /></li>)}</ul>
         </>
       )}
 
       {analysis.similar_cards.length > 0 && (
-        <details className="kb">
-          <summary>Closest known failures</summary>
-          <ul>
+        <div className="kb">
+          <h3>Closest known failures</h3>
+          <ul className="kb-list">
             {analysis.similar_cards.map((c) => (
-              <li key={c.id}><strong>{c.title}</strong> <span className="muted small">(similarity {c.similarity.toFixed(2)})</span>
-                <div className="small">{c.fix}</div></li>
+              <li key={c.id}>
+                <strong>{c.title}</strong>
+                <span className="muted small"> · similarity {c.similarity.toFixed(2)}</span>
+              </li>
             ))}
           </ul>
-        </details>
+        </div>
       )}
     </section>
   );

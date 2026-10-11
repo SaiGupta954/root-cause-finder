@@ -9,4 +9,6 @@ A server fails to start: "Address already in use" (EADDRINUSE, errno 98), "bind(
 Another process (often an old instance of the same service, or a different server) is already listening on the same IP and port.
 
 ## Fix
-Find the owner with `ss -ltnp 'sport = :<port>'` or `lsof -i :<port>`. Stop the old process, or change one of the services to another port. Check for duplicate service units or containers.
+- Find who holds the port: `ss -ltnp 'sport = :<port>'` or `lsof -i :<port>`.
+- Stop the old or duplicate process, or move one service to another port.
+- Look for duplicate service units, containers or a second instance started by mistake.

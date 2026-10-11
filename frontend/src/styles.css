@@ -189,9 +189,7 @@ h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color
 mark { background: var(--mark-bg); color: var(--mark-ink); border-radius: 3px; padding: 0 2px; }
 .steps { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
 .steps code, .kb code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
-.kb { margin-top: 18px; }
-.kb summary { cursor: pointer; color: var(--text-2); font-size: 0.88rem; }
-.kb ul { padding-left: 20px; display: grid; gap: 8px; }
+.kb-list { margin: 0; padding-left: 20px; display: grid; gap: 2px; }
 
 /* Timeline */
 .timeline { margin: 0; }

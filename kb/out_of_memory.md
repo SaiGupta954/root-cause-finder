@@ -9,4 +9,7 @@ title: Out of memory (OOM)
 A process (or container) used more memory than is available or allowed by its cgroup/container limit, often due to a memory leak, an oversized cache or batch, or a limit set too low.
 
 ## Fix
-Find the process in `dmesg` / `journalctl -k` OOM lines. Check limits (`docker stats`, cgroup memory.max). Fix the leak, lower batch sizes, add swap, or raise the memory limit.
+- Confirm the OOM kill: `dmesg -T | grep -i -E 'killed process|out of memory'` or `journalctl -k`.
+- Check the memory limit and usage (`docker stats`, cgroup `memory.max`, `ulimit -v`, heap flags).
+- Find the leak or oversized batch/cache in the process that grew.
+- Raise the limit or add swap only after fixing the growth.

@@ -21,6 +21,10 @@ class Card:
     cause: str
     fix: str
 
+    @property
+    def fix_steps(self) -> list[str]:
+        return [line[2:].strip() for line in self.fix.splitlines() if line.startswith("- ")]
+
     def text(self) -> str:
         return f"{self.title}\nSymptoms: {self.symptoms}\nCause: {self.cause}\nFix: {self.fix}"
 

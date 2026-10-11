@@ -134,3 +134,58 @@ def test_pipeline_skips_llm_for_a_clean_log(data_path):
     report = find_root_cause(open(data_path("normal_20.log")).readlines(), FakeKB(), llm)
     assert llm.prompt is None
     assert report["root_cause"]["root_cause"] == NOT_SURE
+
+
+# ---- alternatives and next steps are decided by plain code, not the LLM ----
+
+class ScoredKB(FakeKB):
+    """KB search with fixed similarities, like the real SSH brute-force run (0.75 vs 0.27)."""
+
+    def __init__(self, scores):
+        super().__init__()
+        self.scores = scores
+
+    def search(self, query, k=3):
+        return [(self.cards[c], s) for c, s in self.scores][:k]
+
+
+def _ssh_lines(data_path):
+    return open(data_path("ssh_bruteforce_30.log")).readlines()
+
+
+def test_far_alternative_is_dropped_and_steps_come_from_the_card(data_path):
+    reply = answer([{"line": 6, "text": "Failed password for root from 173.234.31.186 port 38926 ssh2"}],
+                   category="ssh_bruteforce", alternatives=["port_in_use"])
+    reply["next_steps"] = ["Run `sshd -t` to check for syntax errors in the config file"]  # ignored
+    kb = ScoredKB([("ssh_bruteforce", 0.747), ("port_in_use", 0.27), ("bad_config", 0.21)])
+    rc = find_root_cause(_ssh_lines(data_path), kb, FakeLLM(reply))["root_cause"]
+    assert rc["category"] == "ssh_bruteforce"
+    assert rc["alternatives"] == []
+    assert rc["next_steps"] == kb.cards["ssh_bruteforce"].fix_steps
+    assert not any("sshd -t" in s for s in rc["next_steps"])
+    assert rc["next_steps_source"] == "ssh_bruteforce"
+
+
+def test_close_alternative_is_kept(data_path):
+    reply = answer([{"line": 27, "text": "No space left on device"}], alternatives=["permission_denied", "out_of_memory"])
+    kb = ScoredKB([("disk_full", 0.50), ("permission_denied", 0.45), ("out_of_memory", 0.20)])
+    rc = find_root_cause(_lines(data_path), kb, FakeLLM(reply))["root_cause"]
+    assert rc["alternatives"] == ["permission_denied"]  # 0.45 >= 0.8 * 0.50; 0.20 is too far
+
+
+def test_other_category_gets_no_next_steps(data_path):
+    reply = answer([{"line": 27, "text": "No space left on device"}], category="other", alternatives=[])
+    rc = find_root_cause(_lines(data_path), FakeKB(), FakeLLM(reply))["root_cause"]
+    assert rc["category"] == "other" and rc["next_steps"] == []
+
+
+def test_report_carries_the_similar_cards(data_path):
+    report = find_root_cause(_lines(data_path), FakeKB(), FakeLLM(answer([{"line": 27, "text": "No space left on device"}])))
+    assert report["similar_cards"][0]["id"] == "disk_full"
+    assert report["similar_cards"][0]["fix_steps"]
+
+
+def test_llm_schema_has_no_next_steps():
+    from rcf.llm import SYSTEM_PROMPT, answer_schema
+    assert "next_steps" not in answer_schema(["disk_full"])["properties"]
+    assert "next_steps" not in SYSTEM_PROMPT

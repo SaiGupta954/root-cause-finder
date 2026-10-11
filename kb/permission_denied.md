@@ -9,4 +9,7 @@ title: Permission denied on a file or directory
 The process user lacks rights on the path: wrong owner or mode after a deploy or copy, a service running as a different user, a read-only mount, or SELinux/AppArmor denials.
 
 ## Fix
-Check `ls -l` and `namei -l <path>` for owner and mode along the whole path. Fix with `chown`/`chmod`, or run the service as the right user. Check SELinux (`ausearch -m avc`) or AppArmor logs. Do not use chmod 777.
+- Find the path in the error and check owner and mode along the whole path: `namei -l <path>`.
+- Check which user the service runs as (`ps -o user= -p <pid>`).
+- Fix ownership or mode with `chown`/`chmod` (never chmod 777), or run the service as the right user.
+- If permissions look right, check SELinux (`ausearch -m avc`) or AppArmor denials.

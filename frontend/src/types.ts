@@ -12,6 +12,7 @@ export interface RootCause {
   evidence_lines: EvidenceLine[];
   dropped_evidence: { item: unknown; reason: string }[];
   next_steps: string[];
+  next_steps_source?: string | null;
   error?: string;
   unverified_guess?: string;
 }
@@ -51,7 +52,7 @@ export interface Analysis {
   timeline: TimelinePoint[];
   top_groups: Group[];
   keyword_baseline: { category: string; count: number; lines: number[] }[];
-  similar_cards: { id: string; title: string; similarity: number; fix: string }[];
+  similar_cards: { id: string; title: string; similarity: number; fix_steps: string[] }[];
   root_cause: RootCause;
 }
 

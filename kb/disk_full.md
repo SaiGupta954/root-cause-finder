@@ -9,4 +9,7 @@ title: Disk or filesystem full
 A filesystem reached 100% of its blocks (or ran out of inodes). Usually a growing log, a large temp or cache file, core dumps, or a runaway process writing to disk.
 
 ## Fix
-Check usage with `df -h` and inodes with `df -i`. Find large files with `du -xh / | sort -h | tail`. Delete or rotate old logs, clean caches, restart the service that holds deleted files open (`lsof +L1`). Add monitoring and log rotation.
+- Check usage with `df -h` and inodes with `df -i`.
+- Find what grew with `du -xh / 2>/dev/null | sort -h | tail -20`.
+- Delete or rotate old logs, clean caches and temp files.
+- Restart any process holding deleted files open (`lsof +L1`), then add disk monitoring and log rotation.

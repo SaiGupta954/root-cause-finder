@@ -73,5 +73,5 @@ def verify_answer(answer: dict, by_line: dict[int, str], known_categories: set[s
         "confidence": round(confidence * len(kept) / total, 2),
         "evidence_lines": kept,
         "dropped_evidence": dropped,
-        "next_steps": [str(s) for s in (answer.get("next_steps") or [])][:6],
+        "next_steps": [],  # filled from the chosen category's KB card, never from the LLM
     }

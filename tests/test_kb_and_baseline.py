@@ -8,6 +8,7 @@ def test_every_card_has_all_sections():
     assert len(cards) >= 8
     for c in cards:
         assert c.id and c.title and c.symptoms and c.cause and c.fix
+        assert 2 <= len(c.fix_steps) <= 5, c.id
 
 
 def test_keyword_baseline_ranks_disk_full_first(data_path):

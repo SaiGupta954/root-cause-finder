@@ -61,9 +61,8 @@ def answer_schema(categories: list[str]) -> dict:
                 },
                 "maxItems": 3,
             },
-            "next_steps": {"type": "array", "items": {"type": "string"}, "maxItems": 3},
         },
-        "required": ["root_cause", "category", "alternatives", "confidence", "evidence_lines", "next_steps"],
+        "required": ["root_cause", "category", "alternatives", "confidence", "evidence_lines"],
     }
 
 
@@ -81,7 +80,6 @@ Rules:
   character-for-character excerpt of that line (the message part, at most 120 characters).
   Never invent line numbers or text.
 - confidence is between 0 and 1. Use a low value if the evidence is weak.
-- next_steps: 2 or 3 short, concrete commands or checks.
 Answer with JSON only."""
 
 
