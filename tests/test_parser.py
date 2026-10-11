@@ -75,3 +75,24 @@ def test_parse_fixture_file(data_path):
     recs = LogParser(year=2026).parse_file(data_path("normal_20.log"))
     assert len(recs) == 20
     assert all(r.timestamp for r in recs)
+
+
+def test_docker_timestamp_lines():
+    rec = split_line("2026-10-11T16:00:00.123456789Z 2026/10/11 16:00:00 [emerg] 1#1: unknown directive \"listn\"", 4, 2000)
+    assert rec.timestamp == datetime(2026, 10, 11, 16, 0, 0)
+    assert rec.host is None and rec.component is None
+    assert rec.message.startswith("2026/10/11 16:00:00 [emerg]")
+    assert rec.level == "CRITICAL"
+
+
+def test_docker_line_with_plain_message():
+    rec = split_line("2026-10-11T16:00:01Z Failed password for root from 172.17.0.3 port 4242 ssh2", 1, 2000)
+    assert rec.timestamp == datetime(2026, 10, 11, 16, 0, 1)
+    assert rec.message.startswith("Failed password")
+    assert rec.level == "ERROR"
+
+
+def test_embedded_levels():
+    assert infer_level("2026-10-11 16:00:00.1 UTC [1] FATAL:  data directory has wrong ownership") == "CRITICAL"
+    assert infer_level("2026/10/11 16:00:00 [warn] 1#1: conflicting server name") == "WARNING"
+    assert infer_level("2026-10-11 16:00:00.1 UTC [1] LOG:  database system is ready") == "INFO"

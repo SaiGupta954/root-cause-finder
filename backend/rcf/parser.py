@@ -25,12 +25,15 @@ SYSLOG_RE = re.compile(
     r"(?P<message>.*)$"
 )
 # "2026-10-11T10:00:00.123+00:00 host nginx[12]: message"  (journalctl -o short-iso, rsyslog ISO)
+ISO_TS = r"^(?P<ts>\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2})(?:[.,]\d+)?(?:Z|[+-]\d{2}:?\d{2})?\s+"
 ISO_RE = re.compile(
-    r"^(?P<ts>\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2})(?:[.,]\d+)?(?:Z|[+-]\d{2}:?\d{2})?\s+"
-    r"(?P<host>\S+)\s+"
-    r"(?P<component>[^\s:\[]+(?:\([^)]*\))?)(?:\[(?P<pid>\d+)\])?:\s?"
+    ISO_TS
+    + r"(?P<host>[A-Za-z][\w.-]*)\s+"
+    r"(?P<component>[A-Za-z][^\s:\[]*(?:\([^)]*\))?)(?:\[(?P<pid>\d+)\])?:\s?"
     r"(?P<message>.*)$"
 )
+# "2026-10-11T16:00:00.123456789Z 2026/10/11 16:00:00 [emerg] 1#1: ..."   (docker logs -t, kubectl --timestamps)
+TS_ONLY_RE = re.compile(ISO_TS + r"(?P<message>.*)$")
 # An explicit level word near the start of the message, e.g. "ERROR: ..." or "[warn] ..."
 EXPLICIT_LEVEL_RE = re.compile(
     r"^\W{0,2}(?P<level>emerg|alert|crit(?:ical)?|err(?:or)?|warn(?:ing)?|notice|info|debug)\b",
@@ -41,6 +44,11 @@ ERROR_HINT_RE = re.compile(
     r"out of memory|oom|no space left|cannot|can't|unable)\b",
     re.IGNORECASE,
 )
+# A level inside the message: nginx "[emerg]", postgres "FATAL:", python "ERROR:root:", redis "# WARNING"
+EMBEDDED_LEVEL_RE = re.compile(
+    r"(?:\[|\b)(?P<level>emerg|alert|crit|critical|error|err|warn|warning|notice|fatal|panic)(?:\]|:)",
+    re.IGNORECASE,
+)
 WARN_HINT_RE = re.compile(r"\b(warn(?:ing)?|deprecated|retry(?:ing)?)\b", re.IGNORECASE)
 
 LEVEL_ALIASES = {
@@ -48,6 +56,7 @@ LEVEL_ALIASES = {
     "err": "ERROR", "error": "ERROR",
     "warn": "WARNING", "warning": "WARNING",
     "notice": "INFO", "info": "INFO", "debug": "DEBUG",
+    "fatal": "CRITICAL", "panic": "CRITICAL",
 }
 
 MASKS = [
@@ -90,6 +99,9 @@ def infer_level(message: str) -> str:
     m = EXPLICIT_LEVEL_RE.match(message)
     if m:
         return LEVEL_ALIASES[m.group("level").lower()]
+    m = EMBEDDED_LEVEL_RE.search(message[:100])
+    if m:
+        return LEVEL_ALIASES[m.group("level").lower()]
     if ERROR_HINT_RE.search(message):
         return "ERROR"
     if WARN_HINT_RE.search(message):
@@ -113,6 +125,11 @@ def split_line(raw: str, line_no: int, year: int) -> LogRecord:
                 level=infer_level(message),
                 message=message,
             )
+    m = TS_ONLY_RE.match(raw)
+    if m:
+        message = m.group("message").strip()
+        return LogRecord(line_no, raw, _parse_timestamp(m.group("ts"), year), None, None,
+                         infer_level(message), message)
     message = raw.strip()
     return LogRecord(line_no, raw, None, None, None, infer_level(message), message)
 
@@ -151,7 +168,7 @@ class LogParser:
                 continue
             rec = split_line(raw, i, year)
             # Syslog has no year: when the month goes backwards (Dec -> Jan), roll the year forward.
-            if rec.timestamp and SYSLOG_RE.match(raw):
+            if rec.timestamp and rec.host and SYSLOG_RE.match(raw):
                 if prev_month and rec.timestamp.month < prev_month:
                     year += 1
                     rec.timestamp = rec.timestamp.replace(year=year)
