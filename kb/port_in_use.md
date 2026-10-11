@@ -1,0 +1,12 @@
+---
+id: port_in_use
+title: Port already in use
+---
+## Symptoms
+A server fails to start: "Address already in use" (EADDRINUSE, errno 98), "bind() to 0.0.0.0:80 failed", "could not bind", "failed to listen on port", "port is already allocated".
+
+## Cause
+Another process (often an old instance of the same service, or a different server) is already listening on the same IP and port.
+
+## Fix
+Find the owner with `ss -ltnp 'sport = :<port>'` or `lsof -i :<port>`. Stop the old process, or change one of the services to another port. Check for duplicate service units or containers.

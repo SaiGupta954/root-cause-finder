@@ -1,2 +1,7 @@
+chromadb==1.5.9
 drain3==0.9.11
+fastapi==0.143.0
+httpx==0.28.1
 pytest==9.1.1
+python-multipart==0.0.32
+uvicorn==0.54.0
