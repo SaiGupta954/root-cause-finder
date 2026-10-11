@@ -1,0 +1,38 @@
+Oct 11 09:00:01 web01 CRON[1300]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:00:30 web01 sshd[2100]: Accepted publickey for alice from 10.0.0.5 port 50100 ssh2
+Oct 11 09:01:01 web01 CRON[1301]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:02:01 web01 CRON[1302]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:03:01 web01 CRON[1303]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:04:01 web01 CRON[1304]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:04:30 web01 sshd[2104]: Accepted publickey for alice from 10.0.0.5 port 50104 ssh2
+Oct 11 09:05:01 web01 CRON[1305]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:06:01 web01 CRON[1306]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:07:01 web01 CRON[1307]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:08:01 web01 CRON[1308]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:08:30 web01 sshd[2108]: Accepted publickey for alice from 10.0.0.5 port 50108 ssh2
+Oct 11 09:09:01 web01 CRON[1309]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:10:01 web01 CRON[1310]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:11:01 web01 CRON[1311]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:12:01 web01 CRON[1312]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:12:30 web01 sshd[2112]: Accepted publickey for alice from 10.0.0.5 port 50112 ssh2
+Oct 11 09:13:01 web01 CRON[1313]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:14:01 web01 CRON[1314]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:15:01 web01 CRON[1315]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:16:01 web01 CRON[1316]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:16:30 web01 sshd[2116]: Accepted publickey for alice from 10.0.0.5 port 50116 ssh2
+Oct 11 09:17:01 web01 CRON[1317]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:18:01 web01 CRON[1318]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:19:01 web01 CRON[1319]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:20:02 web01 kernel: EXT4-fs warning (device sda1): ext4_dx_add_entry:2235: Directory index full!
+Oct 11 09:20:03 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:04 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:05 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:06 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:07 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:08 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:09 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:10 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:11 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:12 web01 postgres[4410]: ERROR: could not extend file /var/lib/postgresql/data/base/16384/2619: No space left on device
+Oct 11 09:20:14 web01 nginx[880]: open() /var/log/nginx/access.log failed (28: No space left on device)
+Oct 11 09:21:01 web01 CRON[1321]: (root) CMD (run-parts /etc/cron.hourly)

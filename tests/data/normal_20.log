@@ -1,0 +1,20 @@
+Oct 11 09:00:01 web01 CRON[1201]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:00:05 web01 systemd[1]: Started Session 101 of user alice.
+Oct 11 09:01:01 web01 CRON[1205]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:01:12 web01 sshd[2001]: Accepted publickey for alice from 10.0.0.5 port 50122 ssh2
+Oct 11 09:01:12 web01 sshd[2001]: pam_unix(sshd:session): session opened for user alice by (uid=0)
+Oct 11 09:02:01 web01 CRON[1210]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:02:30 web01 systemd[1]: Started Session 102 of user bob.
+Oct 11 09:03:01 web01 CRON[1214]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:03:44 web01 sshd[2010]: Accepted publickey for bob from 10.0.0.7 port 50300 ssh2
+Oct 11 09:03:44 web01 sshd[2010]: pam_unix(sshd:session): session opened for user bob by (uid=0)
+Oct 11 09:04:01 web01 CRON[1220]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:04:20 web01 nginx[880]: worker process 881 started
+Oct 11 09:05:01 web01 CRON[1225]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:05:10 web01 systemd[1]: Started Session 103 of user carol.
+Oct 11 09:06:01 web01 CRON[1230]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:06:15 web01 sshd[2020]: Accepted publickey for carol from 10.0.0.9 port 50411 ssh2
+Oct 11 09:06:15 web01 sshd[2020]: pam_unix(sshd:session): session opened for user carol by (uid=0)
+Oct 11 09:07:01 web01 CRON[1235]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:08:01 web01 CRON[1240]: (root) CMD (run-parts /etc/cron.hourly)
+Oct 11 09:09:01 web01 CRON[1245]: (root) CMD (run-parts /etc/cron.hourly)
