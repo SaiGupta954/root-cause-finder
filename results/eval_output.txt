@@ -1,0 +1,58 @@
+Root Cause Finder evaluation  2026-10-11 17:36 UTC  commit a746204
+model: llama3.1:8b  machine: arm64 Darwin  cases: 30
+
+case                                   truth              keyword top-3                              LLM top-3                                     sec
+------------------------------------------------------------------------------------------------------------------------------------------------------
+disk_full_postgres                     disk_full          ✓ disk_full                                ✓ disk_full                                  52.4
+disk_full_redis                        disk_full          ✗ -                                        ✓ disk_full,out_of_memory                    42.6
+disk_full_nginx                        disk_full          ✓ disk_full                                ✓ disk_full                                  50.2
+disk_full_exporter                     disk_full          ✓ disk_full                                ✓ disk_full                                  40.8
+dns_failure_wget                       dns_failure        ✗ -                                        ✗ port_in_use,permission_denied              32.3
+dns_failure_python_http                dns_failure        ✓ dns_failure                              ✓ dns_failure,port_in_use                    35.8
+dns_failure_db_connect                 dns_failure        ✓ dns_failure                              ✓ dns_failure                                37.5
+dns_failure_nginx_resolver             dns_failure        ✗ -                                        ✓ dns_failure                                45.5
+crash_loop_missing_env                 crash_loop         ✗ -                                        ✓ crash_loop                                 28.3
+crash_loop_missing_module              crash_loop         ✗ -                                        ✓ crash_loop                                 27.0
+crash_loop_segfault                    crash_loop         ✗ -                                        ✓ crash_loop,out_of_memory                   29.4
+crash_loop_docker_restart              crash_loop         ✗ -                                        ✗ bad_config                                 37.1
+permission_denied_nginx_root           permission_denied  ✓ permission_denied                        ✓ permission_denied,bad_config               43.5
+permission_denied_app_logfile          permission_denied  ✓ permission_denied                        ✓ permission_denied                          35.9
+permission_denied_postgres_datadir     permission_denied  ✓ permission_denied                        ✓ permission_denied                          28.1
+permission_denied_static_upload        permission_denied  ✓ permission_denied                        ✓ permission_denied                          44.0
+port_in_use_nginx                      port_in_use        ✓ port_in_use                              ✓ port_in_use,dns_failure                    47.0
+port_in_use_redis                      port_in_use        ✗ -                                        ✓ port_in_use,out_of_memory                  51.8
+port_in_use_postgres_shared_net        port_in_use        ✓ port_in_use                              ✓ port_in_use                                41.7
+port_in_use_python_api                 port_in_use        ✗ -                                        ✗ not sure                                    0.0
+out_of_memory_cgroup_kill              out_of_memory      ✓ out_of_memory                            ✗ not sure                                    0.0
+out_of_memory_python_memoryerror       out_of_memory      ✓ out_of_memory                            ✗ not sure                                    0.0
+out_of_memory_redis_maxmemory          out_of_memory      ✗ -                                        ✓ out_of_memory                              44.2
+out_of_memory_node_heap                out_of_memory      ✓ out_of_memory                            ✓ out_of_memory                              31.4
+bad_config_nginx_typo                  bad_config         ✓ bad_config                               ✗ not sure                                    0.0
+bad_config_redis                       bad_config         ✗ -                                        ✓ bad_config                                 29.8
+bad_config_postgres                    bad_config         ✓ bad_config                               ✗ permission_denied,port_in_use              34.5
+ssh_bruteforce_root                    ssh_bruteforce     ✓ ssh_bruteforce                           ✓ ssh_bruteforce                             43.7
+ssh_bruteforce_user_enum               ssh_bruteforce     ✓ ssh_bruteforce                           ✓ ssh_bruteforce                             38.1
+ssh_bruteforce_many_ips                ssh_bruteforce     ✓ ssh_bruteforce                           ✓ ssh_bruteforce                             41.1
+
+✓ = right as first answer, ~ = right in top 3, ✗ = wrong
+
+SUMMARY
+  keyword rules only   top-1 19/30 (63%)   top-3 19/30 (63%)   avg 0.01s/log
+  full pipeline (LLM)  top-1 23/30 (77%)   top-3 23/30 (77%)   avg 33.8s/log  (median 37.3s, max 52.4s)
+  'not sure' answers: 4   evidence lines dropped by the check: 0
+
+LLM MISSES (top-1)
+  dns_failure_wget: truth=dns_failure answer=['port_in_use', 'permission_denied'] kb_top=['permission_denied', 'port_in_use', 'crash_loop']
+      said: The upload service is failing to bind to a port due to another process already using it.
+  crash_loop_docker_restart: truth=crash_loop answer=['bad_config'] kb_top=['bad_config', 'permission_denied', 'crash_loop']
+      said: The API service is unable to load its configuration file due to a missing semicolon in /etc/api/config.json.
+  port_in_use_python_api: truth=port_in_use answer=not sure kb_top=[]
+      said: not sure  [nothing in the log was flagged as suspicious]
+  out_of_memory_cgroup_kill: truth=out_of_memory answer=not sure kb_top=[]
+      said: not sure  [nothing in the log was flagged as suspicious]
+  out_of_memory_python_memoryerror: truth=out_of_memory answer=not sure kb_top=[]
+      said: not sure  [nothing in the log was flagged as suspicious]
+  bad_config_nginx_typo: truth=bad_config answer=not sure kb_top=[]
+      said: not sure  [nothing in the log was flagged as suspicious]
+  bad_config_postgres: truth=bad_config answer=['permission_denied', 'port_in_use'] kb_top=['permission_denied', 'port_in_use', 'out_of_memory']
+      said: The PostgreSQL service on host [37] failed to start due to an invalid value for the shared_buffers parameter.

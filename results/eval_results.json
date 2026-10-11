@@ -1,0 +1,1005 @@
+[
+  {
+    "case": "disk_full_postgres",
+    "truth": "disk_full",
+    "lines": 59,
+    "keyword": {
+      "top3": [
+        "disk_full"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "disk_full"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The service 'base' on host '<NUM>' ran out of disk space, causing a file extension error.",
+      "confidence": 0.8,
+      "evidence": [
+        57
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "disk_full",
+        "port_in_use",
+        "out_of_memory"
+      ],
+      "seconds": 52.38
+    }
+  },
+  {
+    "case": "disk_full_redis",
+    "truth": "disk_full",
+    "lines": 12,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "disk_full",
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Redis service is experiencing a memory overcommit issue due to the vm.overcommit_memory setting being disabled.",
+      "confidence": 0.8,
+      "evidence": [
+        1
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "out_of_memory",
+        "crash_loop",
+        "disk_full"
+      ],
+      "seconds": 42.64
+    }
+  },
+  {
+    "case": "disk_full_nginx",
+    "truth": "disk_full",
+    "lines": 14,
+    "keyword": {
+      "top3": [
+        "disk_full"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "disk_full"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The web server's log file /var/log/web/access.log ran out of disk space, causing write failures.",
+      "confidence": 0.9,
+      "evidence": [
+        12,
+        13,
+        14
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "disk_full",
+        "permission_denied",
+        "port_in_use"
+      ],
+      "seconds": 50.19
+    }
+  },
+  {
+    "case": "disk_full_exporter",
+    "truth": "disk_full",
+    "lines": 20,
+    "keyword": {
+      "top3": [
+        "disk_full"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "disk_full"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The exporter service ran out of disk space on a filesystem, causing batch exports to fail.",
+      "confidence": 0.8,
+      "evidence": [
+        15,
+        16,
+        19
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "disk_full",
+        "out_of_memory",
+        "crash_loop"
+      ],
+      "seconds": 40.83
+    }
+  },
+  {
+    "case": "dns_failure_wget",
+    "truth": "dns_failure",
+    "lines": 11,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "port_in_use",
+        "permission_denied"
+      ],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "verified",
+      "root_cause": "The upload service is failing to bind to a port due to another process already using it.",
+      "confidence": 0.8,
+      "evidence": [
+        3,
+        5,
+        11
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "permission_denied",
+        "port_in_use",
+        "crash_loop"
+      ],
+      "seconds": 32.34
+    }
+  },
+  {
+    "case": "dns_failure_python_http",
+    "truth": "dns_failure",
+    "lines": 8,
+    "keyword": {
+      "top3": [
+        "dns_failure"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "dns_failure",
+        "port_in_use"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The sync service is failing to resolve hostnames due to a temporary failure in name resolution.",
+      "confidence": 0.8,
+      "evidence": [
+        2,
+        3,
+        7
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "dns_failure",
+        "port_in_use",
+        "crash_loop"
+      ],
+      "seconds": 35.8
+    }
+  },
+  {
+    "case": "dns_failure_db_connect",
+    "truth": "dns_failure",
+    "lines": 9,
+    "keyword": {
+      "top3": [
+        "dns_failure"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "dns_failure"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The orders-api service is unable to connect to a database on example.com:80 due to a temporary DNS resolution failure.",
+      "confidence": 0.8,
+      "evidence": [
+        2,
+        3,
+        9
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "dns_failure",
+        "port_in_use",
+        "bad_config"
+      ],
+      "seconds": 37.55
+    }
+  },
+  {
+    "case": "dns_failure_nginx_resolver",
+    "truth": "dns_failure",
+    "lines": 38,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "dns_failure"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Nginx service on host 172.18.0.2 is unable to resolve example.com due to a DNS server issue.",
+      "confidence": 0.8,
+      "evidence": [
+        19,
+        21
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "dns_failure",
+        "port_in_use",
+        "ssh_bruteforce"
+      ],
+      "seconds": 45.51
+    }
+  },
+  {
+    "case": "crash_loop_missing_env",
+    "truth": "crash_loop",
+    "lines": 48,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "crash_loop"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The app service entered FATAL state due to too many start retries too quickly on host.",
+      "confidence": 0.8,
+      "evidence": [
+        48
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "out_of_memory",
+        "crash_loop",
+        "port_in_use"
+      ],
+      "seconds": 28.32
+    }
+  },
+  {
+    "case": "crash_loop_missing_module",
+    "truth": "crash_loop",
+    "lines": 28,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "crash_loop"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The app service entered FATAL state due to too many start retries too quickly on host.",
+      "confidence": 0.8,
+      "evidence": [
+        28
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "crash_loop",
+        "out_of_memory",
+        "port_in_use"
+      ],
+      "seconds": 27.03
+    }
+  },
+  {
+    "case": "crash_loop_segfault",
+    "truth": "crash_loop",
+    "lines": 18,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "crash_loop",
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The app service entered FATAL state due to too many start retries on host 'host1' at port 80.",
+      "confidence": 0.8,
+      "evidence": [
+        18
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "out_of_memory",
+        "crash_loop",
+        "port_in_use"
+      ],
+      "seconds": 29.43
+    }
+  },
+  {
+    "case": "crash_loop_docker_restart",
+    "truth": "crash_loop",
+    "lines": 138,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "bad_config"
+      ],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "verified",
+      "root_cause": "The API service is unable to load its configuration file due to a missing semicolon in /etc/api/config.json.",
+      "confidence": 0.8,
+      "evidence": [
+        6,
+        29,
+        121
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "bad_config",
+        "permission_denied",
+        "crash_loop"
+      ],
+      "seconds": 37.1
+    }
+  },
+  {
+    "case": "permission_denied_nginx_root",
+    "truth": "permission_denied",
+    "lines": 18,
+    "keyword": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "permission_denied",
+        "bad_config"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Nginx service on localhost is trying to serve files from /usr/share/nginx/html but lacks permissions due to incorrect ownership or mode.",
+      "confidence": 0.9,
+      "evidence": [
+        11,
+        13,
+        17
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "permission_denied",
+        "bad_config",
+        "dns_failure"
+      ],
+      "seconds": 43.52
+    }
+  },
+  {
+    "case": "permission_denied_app_logfile",
+    "truth": "permission_denied",
+    "lines": 12,
+    "keyword": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The billing service failed to write to its log file due to a permission denied error on /var/log/app/billing.log.",
+      "confidence": 0.9,
+      "evidence": [
+        12
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "permission_denied",
+        "disk_full",
+        "crash_loop"
+      ],
+      "seconds": 35.91
+    }
+  },
+  {
+    "case": "permission_denied_postgres_datadir",
+    "truth": "permission_denied",
+    "lines": 1,
+    "keyword": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The PostgreSQL service failed to create a directory in the /srv/pgdata/data path due to a permission denied error.",
+      "confidence": 0.9,
+      "evidence": [
+        1
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "permission_denied",
+        "bad_config",
+        "disk_full"
+      ],
+      "seconds": 28.07
+    }
+  },
+  {
+    "case": "permission_denied_static_upload",
+    "truth": "permission_denied",
+    "lines": 7,
+    "keyword": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "permission_denied"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The exporter service on host /srv/uploads/report.jsonl is failing due to permission denied errors.",
+      "confidence": 0.8,
+      "evidence": [
+        2,
+        3,
+        6
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "permission_denied",
+        "crash_loop",
+        "bad_config"
+      ],
+      "seconds": 44.05
+    }
+  },
+  {
+    "case": "port_in_use_nginx",
+    "truth": "port_in_use",
+    "lines": 27,
+    "keyword": {
+      "top3": [
+        "port_in_use"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.02
+    },
+    "llm": {
+      "top3": [
+        "port_in_use",
+        "dns_failure"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "Another process is already listening on port 80, causing Nginx to fail binding.",
+      "confidence": 0.9,
+      "evidence": [
+        11,
+        12,
+        24
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "port_in_use",
+        "dns_failure",
+        "permission_denied"
+      ],
+      "seconds": 46.96
+    }
+  },
+  {
+    "case": "port_in_use_redis",
+    "truth": "port_in_use",
+    "lines": 10,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "port_in_use",
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Redis server failed to start because it couldn't bind to port 6379 due to another process already using it.",
+      "confidence": 0.8,
+      "evidence": [
+        9,
+        10,
+        1
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "out_of_memory",
+        "port_in_use",
+        "permission_denied"
+      ],
+      "seconds": 51.79
+    }
+  },
+  {
+    "case": "port_in_use_postgres_shared_net",
+    "truth": "port_in_use",
+    "lines": 58,
+    "keyword": {
+      "top3": [
+        "port_in_use"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "port_in_use"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Apache server on host 'example.com' is trying to bind to port 80, but it's already in use by another process.",
+      "confidence": 0.8,
+      "evidence": [
+        52,
+        54
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "port_in_use",
+        "dns_failure",
+        "permission_denied"
+      ],
+      "seconds": 41.74
+    }
+  },
+  {
+    "case": "port_in_use_python_api",
+    "truth": "port_in_use",
+    "lines": 14,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "not_sure",
+      "root_cause": "not sure",
+      "confidence": 0.0,
+      "evidence": [],
+      "dropped": 0,
+      "error": "nothing in the log was flagged as suspicious",
+      "kb_top": [],
+      "seconds": 0.0
+    }
+  },
+  {
+    "case": "out_of_memory_cgroup_kill",
+    "truth": "out_of_memory",
+    "lines": 6,
+    "keyword": {
+      "top3": [
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "not_sure",
+      "root_cause": "not sure",
+      "confidence": 0.0,
+      "evidence": [],
+      "dropped": 0,
+      "error": "nothing in the log was flagged as suspicious",
+      "kb_top": [],
+      "seconds": 0.0
+    }
+  },
+  {
+    "case": "out_of_memory_python_memoryerror",
+    "truth": "out_of_memory",
+    "lines": 17,
+    "keyword": {
+      "top3": [
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "not_sure",
+      "root_cause": "not sure",
+      "confidence": 0.0,
+      "evidence": [],
+      "dropped": 0,
+      "error": "nothing in the log was flagged as suspicious",
+      "kb_top": [],
+      "seconds": 0.0
+    }
+  },
+  {
+    "case": "out_of_memory_redis_maxmemory",
+    "truth": "out_of_memory",
+    "lines": 199,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.03
+    },
+    "llm": {
+      "top3": [
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Redis service on host session-writer is running out of memory due to a high number of failed set sessions.",
+      "confidence": 0.8,
+      "evidence": [
+        3,
+        4,
+        199
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "out_of_memory",
+        "disk_full",
+        "crash_loop"
+      ],
+      "seconds": 44.21
+    }
+  },
+  {
+    "case": "out_of_memory_node_heap",
+    "truth": "out_of_memory",
+    "lines": 13,
+    "keyword": {
+      "top3": [
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "out_of_memory"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Node.js service ran out of memory due to a JavaScript heap allocation failure on the host 'node1' at port 3000.",
+      "confidence": 0.8,
+      "evidence": [
+        6
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "out_of_memory",
+        "disk_full",
+        "crash_loop"
+      ],
+      "seconds": 31.4
+    }
+  },
+  {
+    "case": "bad_config_nginx_typo",
+    "truth": "bad_config",
+    "lines": 2,
+    "keyword": {
+      "top3": [
+        "bad_config"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "not_sure",
+      "root_cause": "not sure",
+      "confidence": 0.0,
+      "evidence": [],
+      "dropped": 0,
+      "error": "nothing in the log was flagged as suspicious",
+      "kb_top": [],
+      "seconds": 0.0
+    }
+  },
+  {
+    "case": "bad_config_redis",
+    "truth": "bad_config",
+    "lines": 5,
+    "keyword": {
+      "top3": [],
+      "top1_ok": false,
+      "top3_ok": false,
+      "seconds": 0.0
+    },
+    "llm": {
+      "top3": [
+        "bad_config"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "The Redis service failed to start due to a configuration file error on host 'unknown' at port 6379.",
+      "confidence": 1.0,
+      "evidence": [
+        2
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "bad_config",
+        "permission_denied",
+        "crash_loop"
+      ],
+      "seconds": 29.77
+    }
+  },
+  {
+    "case": "bad_config_postgres",
+    "truth": "bad_config",
+    "lines": 30,
+    "keyword": {
+      "top3": [
+        "bad_config"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "permission_denied",
+        "port_in_use"
+      ],
+      "top1_ok": false,
+      "top3_ok": false,
+      "status": "verified",
+      "root_cause": "The PostgreSQL service on host [37] failed to start due to an invalid value for the shared_buffers parameter.",
+      "confidence": 0.8,
+      "evidence": [
+        30
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "permission_denied",
+        "port_in_use",
+        "out_of_memory"
+      ],
+      "seconds": 34.48
+    }
+  },
+  {
+    "case": "ssh_bruteforce_root",
+    "truth": "ssh_bruteforce",
+    "lines": 55,
+    "keyword": {
+      "top3": [
+        "ssh_bruteforce"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "ssh_bruteforce"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "An automated attacker is guessing usernames and passwords over SSH on the host '172.18.0.4' using port 22.",
+      "confidence": 0.9,
+      "evidence": [
+        6,
+        8,
+        54
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "ssh_bruteforce",
+        "port_in_use",
+        "permission_denied"
+      ],
+      "seconds": 43.67
+    }
+  },
+  {
+    "case": "ssh_bruteforce_user_enum",
+    "truth": "ssh_bruteforce",
+    "lines": 101,
+    "keyword": {
+      "top3": [
+        "ssh_bruteforce"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.02
+    },
+    "llm": {
+      "top3": [
+        "ssh_bruteforce"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "An automated attacker is guessing usernames and passwords over SSH on host 172.18.0.4.",
+      "confidence": 0.9,
+      "evidence": [
+        8,
+        12,
+        100
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "ssh_bruteforce",
+        "port_in_use",
+        "permission_denied"
+      ],
+      "seconds": 38.15
+    }
+  },
+  {
+    "case": "ssh_bruteforce_many_ips",
+    "truth": "ssh_bruteforce",
+    "lines": 113,
+    "keyword": {
+      "top3": [
+        "ssh_bruteforce"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "seconds": 0.01
+    },
+    "llm": {
+      "top3": [
+        "ssh_bruteforce"
+      ],
+      "top1_ok": true,
+      "top3_ok": true,
+      "status": "verified",
+      "root_cause": "An automated attacker is guessing usernames and passwords over SSH on the sshd service.",
+      "confidence": 0.9,
+      "evidence": [
+        6,
+        12
+      ],
+      "dropped": 0,
+      "error": null,
+      "kb_top": [
+        "ssh_bruteforce",
+        "port_in_use",
+        "permission_denied"
+      ],
+      "seconds": 41.09
+    }
+  }
+]
